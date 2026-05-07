@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Wise Research Hub — Smart Research. Real African Insights.</title>
+  <meta name="description" content="Africa's premier market research, survey, and data intelligence platform. Built for Nigeria and Africa.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #f5f0e8;
+    }
+    .display-font {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .gold-text {
+      background: linear-gradient(135deg, #C9A84C, #E8C96A, #C9A84C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-bg {
+      background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070') center/cover no-repeat;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="https://your-logo-link-here.com/logo.png" alt="3Wise Logo" class="h-11 w-auto"> 
+        <!-- Replace above with base64 if needed -->
+        <div>
+          <span class="display-font text-3xl font-semibold tracking-tight">3Wise</span>
+          <span class="block text-[10px] text-gold tracking-[2px] uppercase -mt-1">RESEARCH HUB</span>
+        </div>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#services" class="hover:text-gold transition">Services</a>
+        <a href="#about" class="hover:text-gold transition">About</a>
+        <a href="#pricing" class="hover:text-gold transition">Pricing</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+      </div>
+      
+      <a href="#" onclick="document.getElementById('chatbox').scrollIntoView({behavior:'smooth'})" 
+         class="bg-gold hover:bg-amber-400 text-black px-8 py-3.5 rounded-2xl font-semibold transition text-sm">
+        Start Free Survey
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO with Rotating Globe -->
+  <section class="relative min-h-screen flex items-center justify-center hero-bg">
+    <div id="globe-container" class="absolute inset-0 flex items-center justify-center z-0 opacity-90"></div>
+    
+    <div class="relative z-10 text-center max-w-5xl px-6 pt-20">
+      <h1 class="display-font text-6xl md:text-7xl font-bold leading-none mb-6">
+        Smart Research.<br>
+        <span class="gold-text">Real African Insights.</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10">
+        Nigeria's most trusted platform for surveys, market research, and data intelligence. 
+        Built for Africa, by Africans.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="bg-gold text-black px-10 py-5 rounded-2xl font-semibold text-lg hover:scale-105 transition">
+          Create Your First Survey — Free
+        </a>
+        <a href="#" class="border border-gold/50 text-white px-10 py-5 rounded-2xl font-medium text-lg hover:bg-white/10 transition">
+          Watch Demo
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-gold text-xs tracking-widest animate-bounce">
+      SCROLL TO EXPLORE ↓
+    </div>
+  </section>
+
+  <!-- Rest of sections can be added if you want. For now, this is the clean classic foundation -->
+
+  <script>
+    // Simple Three.js Rotating Globe
+    function initGlobe() {
+      const container = document.getElementById('globe-container');
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Globe
+      const geometry = new THREE.SphereGeometry(1.8, 64, 64);
+      const material = new THREE.MeshPhongMaterial({
+        color: 0x1a1a1a,
+        emissive: 0x2a1f0f,
+        shininess: 10,
+        specular: 0xC9A84C,
+      });
+      const globe = new THREE.Mesh(geometry, material);
+      scene.add(globe);
+
+      // Lighting
+      const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(ambient);
+      const pointLight = new THREE.PointLight(0xC9A84C, 1.2, 100);
+      pointLight.position.set(5, 3, 5);
+      scene.add(pointLight);
+
+      camera.position.z = 5;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        globe.rotation.y += 0.002;
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
+
+    window.onload = initGlobe;
+  </script>
+</body>
+</html>
