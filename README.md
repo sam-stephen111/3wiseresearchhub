@@ -3,55 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3Wise Research Hub - Market Research in Nigeria & Africa</title>
+  <title>3Wise Research Hub | Premium Market Research Nigeria</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .gold { color: #f5c542; }
+  </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-black text-white">
+
   <!-- Navigation -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-700">3Wise</h1>
-      <div class="space-x-8 text-gray-700">
-        <a href="#" class="hover:text-indigo-600">Home</a>
-        <a href="#" class="hover:text-indigo-600">Services</a>
-        <a href="#" class="hover:text-indigo-600">Pricing</a>
-        <a href="#" class="hover:text-indigo-600">About</a>
+  <nav class="bg-black border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center text-black font-bold text-3xl">3</div>
+        <h1 class="text-4xl font-bold tracking-tight">3Wise</h1>
       </div>
-      <a href="#" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">Get Started</a>
+      <div class="hidden md:flex items-center gap-10 text-lg">
+        <a href="#" class="hover:text-yellow-400 transition">Home</a>
+        <a href="#" class="hover:text-yellow-400 transition">Services</a>
+        <a href="#" class="hover:text-yellow-400 transition">Pricing</a>
+        <a href="#" class="hover:text-yellow-400 transition">About</a>
+      </div>
+      <a href="#" class="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-yellow-400 transition">Start Free Survey</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white py-24">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold mb-6">Smart Research. Real African Insights.</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">The best platform for Surveys, Market Research, Data Analysis & Academic Projects in Nigeria and Africa.</p>
-      <a href="#" class="bg-white text-indigo-700 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 inline-block">Create Your First Survey Free</a>
+  <!-- Hero Section with Background Image -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070" 
+         class="absolute inset-0 w-full h-full object-cover opacity-70" alt="Research Background">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black"></div>
+    
+    <div class="relative z-10 text-center max-w-5xl px-6">
+      <h2 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+        Premium Research.<br>
+        <span class="gold">Authentic African Insights.</span>
+      </h2>
+      <p class="text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        The most trusted research platform for Nigeria and Africa. Built with excellence.
+      </p>
+      <a href="#" class="bg-yellow-400 hover:bg-amber-500 text-black px-12 py-5 rounded-3xl text-xl font-bold inline-block transition transform hover:scale-105">
+        Create Survey Now - Free
+      </a>
     </div>
   </section>
 
-  <!-- Quick Info -->
-  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
-    <div class="text-center">
-      <i class="fa-solid fa-users text-4xl text-indigo-600 mb-4"></i>
-      <h3 class="font-semibold text-xl">Verified Nigerian Panel</h3>
-      <p class="text-gray-600">Reach real respondents across Nigeria fast.</p>
-    </div>
-    <div class="text-center">
-      <i class="fa-solid fa-bolt text-4xl text-indigo-600 mb-4"></i>
-      <h3 class="font-semibold text-xl">WhatsApp & SMS Distribution</h3>
-      <p class="text-gray-600">Better response rates in Africa.</p>
-    </div>
-    <div class="text-center">
-      <i class="fa-solid fa-naira-sign text-4xl text-indigo-600 mb-4"></i>
-      <h3 class="font-semibold text-xl">Super Affordable</h3>
-      <p class="text-gray-600">Cheaper and better than SurveyMonkey.</p>
-    </div>
-  </div>
+  <!-- Features -->
+  <section class="py-24 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-5xl font-bold text-center mb-16">Why 3Wise Stands Out</h3>
+      
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-zinc-900 border border-yellow-900/30 p-10 rounded-3xl hover:border-yellow-400 transition group">
+          <div class="text-6xl mb-6">🇳🇬</div>
+          <h4 class="text-3xl font-semibold mb-4">Local Intelligence</h4>
+          <p class="text-gray-400 text-lg">Verified Nigerian respondents with deep cultural understanding and high response rates.</p>
+        </div>
 
-  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-    <p>&copy; 2026 3Wise Research Hub. All Rights Reserved.</p>
+        <div class="bg-zinc-900 border border-yellow-900/30 p-10 rounded-3xl hover:border-yellow-400 transition group">
+          <div class="text-6xl mb-6">⚡</div>
+          <h4 class="text-3xl font-semibold mb-4">Lightning Fast</h4>
+          <p class="text-gray-400 text-lg">WhatsApp, SMS & USSD distribution. Get quality results in days, not weeks.</p>
+        </div>
+
+        <div class="bg-zinc-900 border border-yellow-900/30 p-10 rounded-3xl hover:border-yellow-400 transition group">
+          <div class="text-6xl mb-6">💎</div>
+          <h4 class="text-3xl font-semibold mb-4">Premium Quality</h4>
+          <p class="text-gray-400 text-lg">Professional reports, expert analysis & better pricing than SurveyMonkey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-gradient-to-r from-black via-zinc-900 to-black border-t border-yellow-900">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h3 class="text-5xl font-bold mb-6">Ready to Elevate Your Research?</h3>
+      <p class="text-xl text-gray-400 mb-10">Join the new standard for research in Nigeria</p>
+      <a href="#" class="bg-yellow-400 text-black px-14 py-6 rounded-3xl text-2xl font-bold hover:bg-amber-500 transition">
+        Get Started Free
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-black py-12 text-center border-t border-gray-800">
+    <p class="text-gray-500">© 2026 3Wise Research Hub • Abuja, Nigeria</p>
   </footer>
+
 </body>
 </html>
