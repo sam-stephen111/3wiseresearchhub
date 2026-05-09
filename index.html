@@ -228,11 +228,16 @@ h1 em{
 </div>
 
 <!-- FLOATING ACTION BUTTONS -->
-<button class="fab-left" aria-label="AI Chat">
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8l4 4-4 4"/></svg>
+<!-- AI Chat Button (Poe) -->
+<button onclick="openPoeChat()" class="fab-left" aria-label="AI Chat">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M8 12h8M12 8l4 4-4 4"/>
+  </svg>
   AI Chat
 </button>
-<!-- FLOATING WHATSAPP BUTTON -->
+
+<!-- WhatsApp Button -->
 <a href="https://wa.me/2349069340228?text=Hello%203Wise%20Research%20Hub%2C%20I%20would%20like%20to%20make%20an%20enquiry" 
    class="fab-right" 
    target="_blank"
@@ -243,6 +248,15 @@ h1 em{
      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.83L.043 23.25c-.096.345.008.714.27.952.195.179.451.275.71.275a1 1 0 0 0 .299-.046l5.584-1.777A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.668-.5-5.217-1.378L2.5 21.862l1.252-4.2A10 10 0 1 1 12 22z"/>
    </svg>
    Contact Us
+</a>
+
+<script>
+// Open Poe AI Chat in a nice popup window
+function openPoeChat() {
+  window.open('https://poe.com/3wiseai', '3WiseAI', 
+    'width=480,height=680,left=100,top=100,scrollbars=yes,resizable=yes');
+}
+</script>
 </a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
