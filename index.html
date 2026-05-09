@@ -163,6 +163,61 @@ h1 em{
   .btns{flex-direction:column;align-items:center}
   .btn-primary,.btn-secondary{width:220px;text-align:center}
 }
+ 
+  /* AI CHAT PANEL */
+#aiChatPanel{
+  position:fixed;
+  bottom:95px;
+  left:22px;
+  width:380px;
+  height:600px;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(212,175,55,0.25);
+  border-radius:24px;
+  overflow:hidden;
+  z-index:300;
+  display:none;
+  flex-direction:column;
+  box-shadow:0 10px 40px rgba(0,0,0,0.55);
+}
+
+#aiChatPanel iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  background:#000;
+}
+
+.chat-header{
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
+  background:rgba(212,175,55,0.08);
+  border-bottom:1px solid rgba(212,175,55,0.15);
+  color:#D4AF37;
+  font-weight:600;
+  font-size:0.9rem;
+}
+
+.chat-header button{
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+@media(max-width:600px){
+  #aiChatPanel{
+    width:92%;
+    left:4%;
+    height:75vh;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -227,14 +282,27 @@ h1 em{
   </div>
 </div>
 
-<!-- FLOATING AI CHAT BUTTON (Tawk.to) -->
-<button onclick="Tawk_API.toggle()" class="fab-left" aria-label="AI Chat">
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+<!-- AI CHAT BUTTON -->
+<button class="fab-left" onclick="toggleAIChat()" aria-label="AI Chat">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
     <circle cx="12" cy="12" r="10"/>
     <path d="M8 12h8M12 8l4 4-4 4"/>
   </svg>
   AI Chat
 </button>
+
+<!-- AI CHAT PANEL -->
+<div id="aiChatPanel">
+  <div class="chat-header">
+    <span>3WISE AI Assistant</span>
+    <button onclick="toggleAIChat()">✕</button>
+  </div>
+
+  <iframe 
+    src="https://poe.com/3wiseai"
+    frameborder="0">
+  </iframe>
+</div>
 
 <!-- WhatsApp Button -->
 <a href="https://wa.me/2349069340228?text=Hello%203Wise%20Research%20Hub%2C%20I%20would%20like%20to%20make%20an%20enquiry" 
