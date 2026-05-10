@@ -590,8 +590,8 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
     <button class="chat-close" onclick="toggleAIChat()">✕</button>
   </div>
   <div class="model-bar">
-    <button class="model-btn active" data-model="anthropic/claude-3-5-sonnet-20241022" onclick="selectModel(this)">⚡ Claude 3.5</button>
-    <button class="model-btn" data-model="openai/gpt-4o" onclick="selectModel(this)">🧠 GPT-4o</button>
+    <button class="model-btn active" data-model="anthropic/claude-3.5-sonnet" onclick="selectModel(this)">⚡ Claude 3.5</button>
+    <button class="model-btn" data-model="openai/gpt-4o-mini" onclick="selectModel(this)">🧠 GPT-4o Mini</button>
     <button class="model-btn" data-model="google/gemini-2.0-flash-001" onclick="selectModel(this)">✦ Gemini 2.0</button>
     <button class="model-btn" data-model="meta-llama/llama-3.1-70b-instruct" onclick="selectModel(this)">🦙 Llama 3.1</button>
     <button class="model-btn" data-model="mistralai/mixtral-8x22b-instruct" onclick="selectModel(this)">🌀 Mixtral</button>
@@ -677,8 +677,8 @@ function submitForm(){
 })();
 
 /* ===== AI CHAT ENGINE ===== */
-const MODELS={'anthropic/claude-3-5-sonnet-20241022':{label:'Claude 3.5 Sonnet',tag:'Claude'},'openai/gpt-4o':{label:'GPT-4o',tag:'GPT-4o'},'google/gemini-2.0-flash-001':{label:'Gemini 2.0 Flash',tag:'Gemini'},'meta-llama/llama-3.1-70b-instruct':{label:'Llama 3.1 70B',tag:'Llama'},'mistralai/mixtral-8x22b-instruct':{label:'Mixtral 8x22B',tag:'Mixtral'}};
-let activeModel='anthropic/claude-3-5-sonnet-20241022',chatHistory=[],isLoading=false;
+const MODELS={'anthropic/claude-3.5-sonnet':{label:'Claude 3.5 Sonnet',tag:'Claude'},'openai/gpt-4o-mini':{label:'GPT-4o Mini',tag:'GPT-4o'},'google/gemini-2.0-flash-001':{label:'Gemini 2.0 Flash',tag:'Gemini'},'meta-llama/llama-3.1-70b-instruct':{label:'Llama 3.1 70B',tag:'Llama'},'mistralai/mixtral-8x22b-instruct':{label:'Mixtral 8x22B',tag:'Mixtral'}};
+let activeModel='anthropic/claude-3.5-sonnet',chatHistory=[],isLoading=false;
 
 const SYSTEM_PROMPT=`You are the 3WISE AI Assistant — an exceptionally knowledgeable, professional, and warm research advisor for 3WISE Research Hub, a premium research and analytics firm dedicated to Africa's next generation of leaders, entrepreneurs, and innovators.
 
