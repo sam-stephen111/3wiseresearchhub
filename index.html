@@ -584,7 +584,7 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
       <div class="chat-avatar">3W</div>
       <div>
         <div class="chat-title">3WISE AI Assistant</div>
-        <div class="chat-subtitle" id="activeModelLabel">Powered by Claude · Always ready</div>
+        <div class="chat-subtitle" id="activeModelLabel">Powered by 5 Free AI Models · Always ready</div>
       </div>
     </div>
     <button class="chat-close" onclick="toggleAIChat()">✕</button>
@@ -593,8 +593,8 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
     <button class="model-btn active" data-model="meta-llama/llama-3.3-70b-instruct:free" onclick="selectModel(this)">🦙 Llama 3.3</button>
     <button class="model-btn" data-model="openai/gpt-4o-mini:free" onclick="selectModel(this)">🧠 GPT-4o Mini</button>
     <button class="model-btn" data-model="google/gemini-2.0-flash-exp:free" onclick="selectModel(this)">✦ Gemini 2.0</button>
-    <button class="model-btn" data-model="meta-llama/llama-3.1-70b-instruct:free" onclick="selectModel(this)">🦙 Llama 3.1</button>
-    <button class="model-btn" data-model="mistralai/mistral-7b-instruct:free" onclick="selectModel(this)">🌀 Mistral</button>
+    <button class="model-btn" data-model="mistralai/mistral-7b-instruct:free" onclick="selectModel(this)">🌀 Mistral 7B</button>
+    <button class="model-btn" data-model="microsoft/phi-3-mini-128k-instruct:free" onclick="selectModel(this)">⚡ Phi-3 Mini</button>
   </div>
   <div id="chatMessages"></div>
   <div class="quick-prompts" id="quickPrompts">
@@ -677,7 +677,7 @@ function submitForm(){
 })();
 
 /* ===== AI CHAT ENGINE ===== */
-const MODELS={'meta-llama/llama-3.3-70b-instruct:free':{label:'Llama 3.3 70B',tag:'Llama3.3'},'openai/gpt-4o-mini:free':{label:'GPT-4o Mini',tag:'GPT-4o'},'google/gemini-2.0-flash-exp:free':{label:'Gemini 2.0 Flash',tag:'Gemini'},'meta-llama/llama-3.1-70b-instruct:free':{label:'Llama 3.1 70B',tag:'Llama'},'mistralai/mistral-7b-instruct:free':{label:'Mistral 7B',tag:'Mistral'}};
+const MODELS={'meta-llama/llama-3.3-70b-instruct:free':{label:'Llama 3.3 70B',tag:'Llama3.3'},'openai/gpt-4o-mini:free':{label:'GPT-4o Mini',tag:'GPT-4o'},'google/gemini-2.0-flash-exp:free':{label:'Gemini 2.0 Flash',tag:'Gemini'},'mistralai/mistral-7b-instruct:free':{label:'Mistral 7B',tag:'Mistral'},'microsoft/phi-3-mini-128k-instruct:free':{label:'Phi-3 Mini',tag:'Phi-3'}};
 let activeModel='meta-llama/llama-3.3-70b-instruct:free',chatHistory=[],isLoading=false;
 
 const SYSTEM_PROMPT=`You are the 3WISE AI Assistant — an exceptionally knowledgeable, professional, and warm research advisor for 3WISE Research Hub, a premium research and analytics firm dedicated to Africa's next generation of leaders, entrepreneurs, and innovators.
@@ -775,7 +775,7 @@ function toggleAIChat(){
     panel.style.display='flex';panelOpen=true;
     requestAnimationFrame(()=>{panel.style.opacity='1';panel.style.transform='translateY(0) scale(1)';});
     if(document.getElementById('chatMessages').children.length===0){
-      appendMessage('bot','Hello! 👋 I\'m the **3WISE AI Assistant**, powered by multiple AI models.\n\nI can help you with:\n• Research services & pricing\n• Academic support & methodology\n• African market insights\n• Starting your project\n\nUse the model buttons above to switch between Claude, GPT-4o, Gemini and more!\n\nHow can I help you today?',MODELS[activeModel]?.tag);
+      appendMessage('bot','Hello! 👋 I\'m the **3WISE AI Assistant**, powered by multiple AI models.\n\nI can help you with:\n• Research services & pricing\n• Academic support & methodology\n• African market insights\n• Starting your project\n\nUse the model buttons above to switch between Llama, GPT-4o, Gemini and more!\n\nHow can I help you today?',MODELS[activeModel]?.tag);
     }
     setTimeout(()=>document.getElementById('chatInput').focus(),300);
   }
