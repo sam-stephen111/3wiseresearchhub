@@ -774,7 +774,7 @@ function toggleAIChat(){
     panel.style.display='flex';panelOpen=true;
     requestAnimationFrame(()=>{panel.style.opacity='1';panel.style.transform='translateY(0) scale(1)';});
     if(document.getElementById('chatMessages').children.length===0){
-      appendMessage('bot','Hello! 👋 I\'m the **3WISE AI Assistant**, powered by multiple AI models.\n\nI can help you with:\n• Research services & pricing\n• Academic support & methodology\n• African market insights\n• Starting your project\n\nUse the model buttons above to switch between Llama, GPT-4o, Gemini and more!\n\nHow can I help you today?',MODELS[activeModel]?.tag);
+      appendMessage('bot','Hello! 👋 I\'m the **3WISE AI Assistant**, powered by multiple AI models.\n\nI can help you with:\n• Research services & pricing\n• Academic support & methodology\n• African market insights\n• Starting your project\n\nUse the model buttons above to switch between Auto, Mixtral, Llama 3.3 and GPT-4o Mini!\n\nHow can I help you today?',MODELS[activeModel]?.tag);
     }
     setTimeout(()=>document.getElementById('chatInput').focus(),300);
   }
