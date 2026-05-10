@@ -584,17 +584,16 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
       <div class="chat-avatar">3W</div>
       <div>
         <div class="chat-title">3WISE AI Assistant</div>
-        <div class="chat-subtitle" id="activeModelLabel">Powered by 5 Free AI Models · Always ready</div>
+        <div class="chat-subtitle" id="activeModelLabel">Powered by Auto · Mixtral · Llama · GPT-4o</div>
       </div>
     </div>
     <button class="chat-close" onclick="toggleAIChat()">✕</button>
   </div>
   <div class="model-bar">
-    <button class="model-btn active" data-model="meta-llama/llama-3.3-70b-instruct:free" onclick="selectModel(this)">🦙 Llama 3.3</button>
-    <button class="model-btn" data-model="deepseek/deepseek-chat-v3-0324:free" onclick="selectModel(this)">🔍 DeepSeek V3</button>
-    <button class="model-btn" data-model="google/gemma-3-27b-it:free" onclick="selectModel(this)">✦ Gemma 3</button>
-    <button class="model-btn" data-model="mistralai/mistral-7b-instruct:free" onclick="selectModel(this)">🌀 Mistral 7B</button>
-    <button class="model-btn" data-model="qwen/qwen3-8b:free" onclick="selectModel(this)">⚡ Qwen3</button>
+    <button class="model-btn active" data-model="openrouter/auto" onclick="selectModel(this)">⚡ Auto</button>
+    <button class="model-btn" data-model="mistralai/mixtral-8x7b-instruct" onclick="selectModel(this)">🌀 Mixtral</button>
+    <button class="model-btn" data-model="meta-llama/llama-3.3-70b-instruct:free" onclick="selectModel(this)">🦙 Llama 3.3</button>
+    <button class="model-btn" data-model="openai/gpt-4o-mini" onclick="selectModel(this)">🧠 GPT-4o Mini</button>
   </div>
   <div id="chatMessages"></div>
   <div class="quick-prompts" id="quickPrompts">
@@ -677,8 +676,8 @@ function submitForm(){
 })();
 
 /* ===== AI CHAT ENGINE ===== */
-const MODELS={'meta-llama/llama-3.3-70b-instruct:free':{label:'Llama 3.3 70B',tag:'Llama'},'deepseek/deepseek-chat-v3-0324:free':{label:'DeepSeek V3',tag:'DeepSeek'},'google/gemma-3-27b-it:free':{label:'Gemma 3 27B',tag:'Gemma'},'mistralai/mistral-7b-instruct:free':{label:'Mistral 7B',tag:'Mistral'},'qwen/qwen3-8b:free':{label:'Qwen3 8B',tag:'Qwen'}};
-let activeModel='meta-llama/llama-3.3-70b-instruct:free',chatHistory=[],isLoading=false;
+const MODELS={'openrouter/auto':{label:'Auto Best Model',tag:'Auto'},'mistralai/mixtral-8x7b-instruct':{label:'Mixtral 8x7B',tag:'Mixtral'},'meta-llama/llama-3.3-70b-instruct:free':{label:'Llama 3.3 70B',tag:'Llama'},'openai/gpt-4o-mini':{label:'GPT-4o Mini',tag:'GPT-4o'}};
+let activeModel='openrouter/auto',chatHistory=[],isLoading=false;
 
 const SYSTEM_PROMPT=`You are the 3WISE AI Assistant — an exceptionally knowledgeable, professional, and warm research advisor for 3WISE Research Hub, a premium research and analytics firm dedicated to Africa's next generation of leaders, entrepreneurs, and innovators.
 
