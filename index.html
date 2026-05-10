@@ -184,7 +184,7 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
 /* ===== AI CHAT PANEL ===== */
-#aiChatPanel{position:fixed;bottom:95px;left:22px;width:400px;height:600px;background:rgba(6,6,6,0.98);border:1px solid rgba(212,175,55,0.28);border-radius:22px;overflow:hidden;z-index:900;display:none;flex-direction:column;box-shadow:0 24px 80px rgba(0,0,0,0.8),0 0 60px rgba(212,175,55,0.05);opacity:0;transform:translateY(16px) scale(0.97);transition:opacity 0.28s cubic-bezier(.4,0,.2,1),transform 0.28s cubic-bezier(.4,0,.2,1)}
+#aiChatPanel{position:fixed;bottom:95px;left:22px;width:400px;height:520px;background:rgba(6,6,6,0.98);border:1px solid rgba(212,175,55,0.28);border-radius:22px;overflow:hidden;z-index:900;display:none;flex-direction:column;box-shadow:0 24px 80px rgba(0,0,0,0.8),0 0 60px rgba(212,175,55,0.05);opacity:0;transform:translateY(16px) scale(0.97);transition:opacity 0.28s cubic-bezier(.4,0,.2,1),transform 0.28s cubic-bezier(.4,0,.2,1)}
 #aiChatPanel.open{display:flex;opacity:1;transform:translateY(0) scale(1)}
 .chat-header{flex-shrink:0;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:linear-gradient(90deg,rgba(212,175,55,0.09),rgba(212,175,55,0.04));border-bottom:1px solid rgba(212,175,55,0.15)}
 .chat-header-left{display:flex;align-items:center;gap:11px}
@@ -242,7 +242,7 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
   h1.hero-h1{font-size:2.4rem}.badge-title{font-size:1.6rem}
   .btns{flex-direction:column;align-items:center}
   .btn-primary,.btn-secondary{width:220px;text-align:center}
-  #aiChatPanel{width:calc(100vw - 24px);left:12px;bottom:90px;height:74vh}
+  #aiChatPanel{width:calc(100vw - 24px);left:12px;bottom:90px;height:62vh}
   .footer-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
   .section{padding:60px 5%}
 }
@@ -590,9 +590,9 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
     <button class="chat-close" onclick="toggleAIChat()">✕</button>
   </div>
   <div class="model-bar">
-    <button class="model-btn active" data-model="anthropic/claude-3.5-sonnet" onclick="selectModel(this)">⚡ Claude 3.5</button>
+    <button class="model-btn active" data-model="anthropic/claude-3-5-sonnet-20241022" onclick="selectModel(this)">⚡ Claude 3.5</button>
     <button class="model-btn" data-model="openai/gpt-4o" onclick="selectModel(this)">🧠 GPT-4o</button>
-    <button class="model-btn" data-model="google/gemini-pro-1.5" onclick="selectModel(this)">✦ Gemini Pro</button>
+    <button class="model-btn" data-model="google/gemini-2.0-flash-001" onclick="selectModel(this)">✦ Gemini 2.0</button>
     <button class="model-btn" data-model="meta-llama/llama-3.1-70b-instruct" onclick="selectModel(this)">🦙 Llama 3.1</button>
     <button class="model-btn" data-model="mistralai/mixtral-8x22b-instruct" onclick="selectModel(this)">🌀 Mixtral</button>
   </div>
@@ -677,8 +677,8 @@ function submitForm(){
 })();
 
 /* ===== AI CHAT ENGINE ===== */
-const MODELS={'anthropic/claude-3.5-sonnet':{label:'Claude 3.5 Sonnet',tag:'Claude'},'openai/gpt-4o':{label:'GPT-4o',tag:'GPT-4o'},'google/gemini-pro-1.5':{label:'Gemini Pro 1.5',tag:'Gemini'},'meta-llama/llama-3.1-70b-instruct':{label:'Llama 3.1 70B',tag:'Llama'},'mistralai/mixtral-8x22b-instruct':{label:'Mixtral 8x22B',tag:'Mixtral'}};
-let activeModel='anthropic/claude-3.5-sonnet',chatHistory=[],isLoading=false;
+const MODELS={'anthropic/claude-3-5-sonnet-20241022':{label:'Claude 3.5 Sonnet',tag:'Claude'},'openai/gpt-4o':{label:'GPT-4o',tag:'GPT-4o'},'google/gemini-2.0-flash-001':{label:'Gemini 2.0 Flash',tag:'Gemini'},'meta-llama/llama-3.1-70b-instruct':{label:'Llama 3.1 70B',tag:'Llama'},'mistralai/mixtral-8x22b-instruct':{label:'Mixtral 8x22B',tag:'Mixtral'}};
+let activeModel='anthropic/claude-3-5-sonnet-20241022',chatHistory=[],isLoading=false;
 
 const SYSTEM_PROMPT=`You are the 3WISE AI Assistant — an exceptionally knowledgeable, professional, and warm research advisor for 3WISE Research Hub, a premium research and analytics firm dedicated to Africa's next generation of leaders, entrepreneurs, and innovators.
 
