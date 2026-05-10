@@ -747,7 +747,10 @@ async function callOpenRouter(userText){
     const data=await res.json();
     const reply=data.choices?.[0]?.message?.content||"I couldn't get a response. Please try again.";
     chatHistory.push({role:'assistant',content:reply});return reply;
-  }catch(e){chatHistory.pop();return `⚠️ Connection issue: ${e.message}\n\nFor immediate help, reach us on WhatsApp at **+2349069340228** — we're always ready!`;}
+  }catch(e){chatHistory.pop();
+    console.error('Chat error:',e);
+    return `⚠️ Error: ${e.message}\n\nPlease try again or reach us on WhatsApp at **+2349069340228**`;
+  }
 }
 async function sendMessage(){
   const input=document.getElementById('chatInput');
