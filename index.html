@@ -584,14 +584,14 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
       <div class="chat-avatar">3W</div>
       <div>
         <div class="chat-title">3WISE AI Assistant</div>
-        <div class="chat-subtitle" id="activeModelLabel">Smart AI Assistant · Always ready</div>
+        <div class="chat-subtitle" id="activeModelLabel">Powered by GPT-4o Mini · Always ready</div>
       </div>
     </div>
     <button class="chat-close" onclick="toggleAIChat()">✕</button>
   </div>
   <div class="model-bar" style="justify-content:center;">
-    <button class="model-btn active" data-model="openrouter/auto" onclick="selectModel(this)">⚡ Auto</button>
-    <button class="model-btn" data-model="openai/gpt-4o-mini" onclick="selectModel(this)">🧠 GPT-4o Mini</button>
+    <button class="model-btn" data-model="openrouter/auto" onclick="selectModel(this)">⚡ Auto</button>
+    <button class="model-btn active" data-model="openai/gpt-4o-mini" onclick="selectModel(this)">🧠 GPT-4o Mini</button>
   </div>
   <div id="chatMessages"></div>
   <div class="quick-prompts" id="quickPrompts">
@@ -675,7 +675,7 @@ function submitForm(){
 
 /* ===== AI CHAT ENGINE ===== */
 const MODELS={'openrouter/auto':{label:'Auto Best Model',tag:'Auto'},'openai/gpt-4o-mini':{label:'GPT-4o Mini',tag:'GPT-4o'}};
-let activeModel='openrouter/auto',chatHistory=[],isLoading=false;
+let activeModel='openai/gpt-4o-mini',chatHistory=[],isLoading=false;
 
 const SYSTEM_PROMPT=`You are the 3WISE AI Assistant — a sharp, intelligent research consultant for 3WISE Research Hub, Nigeria.
 
