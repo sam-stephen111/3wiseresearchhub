@@ -1,3 +1,5 @@
+html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,12 +233,965 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .status-text{font-size:0.58rem;color:rgba(255,255,255,0.25);letter-spacing:0.05em}
 
+/* ===========================
+   INNER PAGES — LUXURY REDESIGN
+   =========================== */
+
+/* PAGE HERO BANNER */
+.page-hero{
+  position:relative;
+  padding:100px 6% 80px;
+  overflow:hidden;
+  border-bottom:0.5px solid rgba(212,175,55,0.1);
+}
+.page-hero::before{
+  content:'';
+  position:absolute;
+  top:-40%;left:50%;
+  transform:translateX(-50%);
+  width:80%;height:100%;
+  background:radial-gradient(ellipse,rgba(212,175,55,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+.page-hero::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,0.3),transparent);
+}
+.page-hero-label{
+  display:inline-block;
+  font-size:0.6rem;
+  letter-spacing:0.35em;
+  color:var(--gold);
+  font-weight:500;
+  margin-bottom:18px;
+  padding:6px 16px;
+  border:0.5px solid rgba(212,175,55,0.25);
+  border-radius:50px;
+  background:rgba(212,175,55,0.05);
+}
+.page-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.5rem,5vw,4.2rem);
+  font-weight:900;
+  color:#fff;
+  line-height:1.1;
+  max-width:700px;
+  margin-bottom:20px;
+}
+.page-hero h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,#D4AF37,#F5D76E,#B8940A);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.page-hero p{
+  font-size:1.05rem;
+  color:rgba(255,255,255,0.5);
+  max-width:560px;
+  line-height:1.75;
+  font-weight:300;
+}
+.page-hero-deco{
+  position:absolute;
+  right:6%;top:50%;
+  transform:translateY(-50%);
+  font-size:10rem;
+  opacity:0.04;
+  pointer-events:none;
+  font-family:'Playfair Display',serif;
+  font-weight:900;
+  color:var(--gold);
+  line-height:1;
+  user-select:none;
+}
+
+/* GOLD LINE DIVIDER */
+.gold-line{
+  width:100%;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,0.25),transparent);
+  margin:0;
+}
+
+/* ===== ABOUT PAGE — REDESIGNED ===== */
+.about-story-section{padding:90px 6%}
+.about-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-story-visual{position:relative}
+.about-story-img{
+  width:100%;aspect-ratio:3/4;
+  border-radius:24px;
+  background:linear-gradient(160deg,rgba(212,175,55,0.1) 0%,rgba(212,175,55,0.02) 100%);
+  border:0.5px solid rgba(212,175,55,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:6rem;
+  position:relative;overflow:hidden;
+}
+.about-story-img::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:50%;
+  background:linear-gradient(180deg,rgba(212,175,55,0.06),transparent);
+}
+.about-story-badge{
+  position:absolute;
+  bottom:-20px;left:-20px;
+  background:linear-gradient(135deg,#D4AF37,#B8940A);
+  border-radius:20px;
+  padding:22px 28px;
+  box-shadow:0 12px 40px rgba(212,175,55,0.35);
+}
+.about-story-badge strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;font-weight:900;
+  color:#000;line-height:1;
+}
+.about-story-badge span{
+  font-size:0.65rem;color:rgba(0,0,0,0.65);
+  letter-spacing:0.12em;font-weight:500;
+}
+.about-story-badge2{
+  position:absolute;top:-16px;right:-16px;
+  background:rgba(10,10,10,0.9);
+  border:1px solid rgba(212,175,55,0.3);
+  border-radius:16px;
+  padding:16px 20px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+}
+.about-story-badge2 strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;font-weight:900;
+  color:var(--gold);line-height:1;
+}
+.about-story-badge2 span{
+  font-size:0.6rem;color:rgba(255,255,255,0.4);
+  letter-spacing:0.1em;
+}
+.about-story-content{}
+.about-story-content .section-label{margin-bottom:10px}
+.about-story-content .section-title{margin-bottom:16px}
+.about-story-content p{
+  font-size:0.95rem;color:rgba(255,255,255,0.55);
+  line-height:1.85;margin-bottom:16px;font-weight:300;
+}
+
+/* VALUES — LUXURY GRID */
+.values-section{padding:80px 6%;background:rgba(255,255,255,0.012)}
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  margin-top:56px;
+  border:0.5px solid rgba(212,175,55,0.12);
+  border-radius:24px;
+  overflow:hidden;
+}
+.value-card{
+  padding:40px 28px;
+  background:rgba(255,255,255,0.015);
+  position:relative;overflow:hidden;
+  transition:background 0.3s;
+}
+.value-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:0;transition:opacity 0.3s;
+}
+.value-card:hover{background:rgba(212,175,55,0.04)}
+.value-card:hover::before{opacity:1}
+.value-card-num{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;font-weight:900;
+  color:rgba(212,175,55,0.1);
+  line-height:1;margin-bottom:20px;
+}
+.value-card-icon{
+  width:50px;height:50px;
+  border-radius:14px;
+  background:rgba(212,175,55,0.08);
+  border:0.5px solid rgba(212,175,55,0.18);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:18px;
+}
+.value-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-weight:700;
+  color:#fff;margin-bottom:10px;
+}
+.value-card p{
+  font-size:0.82rem;color:rgba(255,255,255,0.45);
+  line-height:1.7;
+}
+
+/* TEAM SECTION */
+.team-section{padding:90px 6%}
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:56px;
+}
+.team-card{
+  border-radius:20px;overflow:hidden;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.12);
+  transition:all 0.35s;
+  position:relative;
+}
+.team-card:hover{
+  border-color:rgba(212,175,55,0.35);
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 30px rgba(212,175,55,0.06);
+}
+.team-card-top{
+  height:220px;
+  background:linear-gradient(135deg,rgba(212,175,55,0.08),rgba(212,175,55,0.02));
+  border-bottom:0.5px solid rgba(212,175,55,0.1);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.team-avatar{
+  width:110px;height:110px;border-radius:50%;
+  background:linear-gradient(135deg,#D4AF37,#B8940A);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-size:2rem;font-weight:900;color:#000;
+  border:3px solid rgba(212,175,55,0.3);
+  box-shadow:0 0 30px rgba(212,175,55,0.2);
+  position:relative;z-index:1;
+}
+.team-card-body{padding:24px}
+.team-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-weight:700;
+  color:#fff;margin-bottom:4px;
+}
+.team-card-role{
+  font-size:0.75rem;color:var(--gold);
+  font-weight:500;letter-spacing:0.06em;
+  margin-bottom:12px;
+}
+.team-card p{font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65}
+
+/* PROCESS LUXURY */
+.process-luxury{padding:90px 6%;background:rgba(255,255,255,0.012)}
+.process-luxury-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;margin-top:56px;
+}
+.process-lux-card{
+  position:relative;
+  padding:36px 28px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.12);
+  transition:all 0.3s;
+  overflow:hidden;
+}
+.process-lux-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:0;transition:opacity 0.3s;
+}
+.process-lux-card:hover{border-color:rgba(212,175,55,0.3);transform:translateY(-4px)}
+.process-lux-card:hover::after{opacity:1}
+.process-lux-num{
+  font-family:'Playfair Display',serif;
+  font-size:4rem;font-weight:900;
+  color:rgba(212,175,55,0.08);
+  line-height:1;
+  position:absolute;top:16px;right:20px;
+}
+.process-lux-icon{
+  width:52px;height:52px;
+  border-radius:14px;
+  background:rgba(212,175,55,0.08);
+  border:0.5px solid rgba(212,175,55,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:20px;
+}
+.process-lux-card h4{
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem;font-weight:700;
+  color:#fff;margin-bottom:10px;
+}
+.process-lux-card p{
+  font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.7;
+}
+
+/* ===== SERVICES PAGE — REDESIGNED ===== */
+.services-full-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:56px;
+}
+.svc-card-lux{
+  position:relative;
+  border-radius:22px;
+  padding:36px 30px 32px;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.12);
+  transition:all 0.35s;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.svc-card-lux::before{
+  content:'';position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(212,175,55,0.05),transparent 60%);
+  opacity:0;transition:opacity 0.35s;
+}
+.svc-card-lux:hover{
+  border-color:rgba(212,175,55,0.38);
+  transform:translateY(-5px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 40px rgba(212,175,55,0.05);
+}
+.svc-card-lux:hover::before{opacity:1}
+.svc-card-number{
+  position:absolute;top:20px;right:24px;
+  font-family:'Playfair Display',serif;
+  font-size:3.5rem;font-weight:900;
+  color:rgba(212,175,55,0.06);
+  line-height:1;
+}
+.svc-card-icon-lux{
+  width:56px;height:56px;
+  border-radius:16px;
+  background:rgba(212,175,55,0.08);
+  border:0.5px solid rgba(212,175,55,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:22px;
+  position:relative;z-index:1;
+}
+.svc-card-lux h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.18rem;font-weight:700;
+  color:#fff;margin-bottom:12px;
+  position:relative;z-index:1;
+  line-height:1.3;
+}
+.svc-card-lux p{
+  font-size:0.84rem;color:rgba(255,255,255,0.5);
+  line-height:1.7;flex:1;
+  position:relative;z-index:1;
+}
+.svc-card-footer{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:0.5px solid rgba(212,175,55,0.1);
+  display:flex;align-items:center;justify-content:space-between;
+  position:relative;z-index:1;
+}
+.svc-price{
+  font-size:0.72rem;
+  color:var(--gold);
+  font-weight:600;
+  letter-spacing:0.06em;
+  background:rgba(212,175,55,0.08);
+  border:0.5px solid rgba(212,175,55,0.2);
+  border-radius:50px;padding:4px 12px;
+}
+.svc-arrow{
+  width:32px;height:32px;
+  border-radius:50%;
+  border:0.5px solid rgba(212,175,55,0.25);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:0.9rem;
+  transition:all 0.25s;cursor:pointer;
+}
+.svc-card-lux:hover .svc-arrow{
+  background:var(--gold);color:#000;
+}
+
+/* SERVICES CTA STRIP */
+.svc-cta-strip{
+  margin:60px 6%;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(212,175,55,0.08),rgba(212,175,55,0.03));
+  border:0.5px solid rgba(212,175,55,0.2);
+  padding:56px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:40px;
+  position:relative;overflow:hidden;
+}
+.svc-cta-strip::before{
+  content:'';position:absolute;
+  top:-50%;right:-10%;
+  width:400px;height:400px;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(212,175,55,0.08),transparent 70%);
+  pointer-events:none;
+}
+.svc-cta-text h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.9rem;font-weight:900;
+  color:#fff;margin-bottom:8px;
+}
+.svc-cta-text h3 em{
+  font-style:italic;
+  background:linear-gradient(135deg,#D4AF37,#F5D76E,#B8940A);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.svc-cta-text p{
+  font-size:0.9rem;color:rgba(255,255,255,0.5);max-width:440px;
+}
+.svc-cta-btns{display:flex;gap:12px;flex-shrink:0}
+
+/* ===== PORTFOLIO PAGE — REDESIGNED ===== */
+.portfolio-filter{
+  display:flex;gap:10px;flex-wrap:wrap;
+  margin-top:40px;
+}
+.filter-btn{
+  font-size:0.72rem;
+  letter-spacing:0.1em;
+  color:rgba(255,255,255,0.55);
+  background:rgba(255,255,255,0.03);
+  border:0.5px solid rgba(255,255,255,0.1);
+  border-radius:50px;
+  padding:7px 18px;
+  cursor:pointer;
+  font-family:'Outfit',sans-serif;
+  transition:all 0.25s;
+}
+.filter-btn.active,.filter-btn:hover{
+  color:var(--gold);
+  border-color:rgba(212,175,55,0.35);
+  background:rgba(212,175,55,0.06);
+}
+.portfolio-lux-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:40px;
+}
+.portfolio-lux-card{
+  border-radius:20px;overflow:hidden;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.1);
+  transition:all 0.35s;cursor:pointer;
+  position:relative;
+}
+.portfolio-lux-card:hover{
+  border-color:rgba(212,175,55,0.38);
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+.portfolio-lux-img{
+  height:200px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:3rem;
+  position:relative;overflow:hidden;
+  border-bottom:0.5px solid rgba(212,175,55,0.08);
+}
+.portfolio-lux-img::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(212,175,55,0.1),rgba(10,10,30,0.5));
+}
+.portfolio-lux-img span{position:relative;z-index:1}
+.portfolio-lux-overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity 0.3s;
+}
+.portfolio-lux-card:hover .portfolio-lux-overlay{opacity:1}
+.portfolio-overlay-btn{
+  background:var(--gold);color:#000;
+  border:none;border-radius:50px;
+  padding:10px 24px;
+  font-family:'Outfit',sans-serif;
+  font-size:0.8rem;font-weight:600;
+  cursor:pointer;
+}
+.portfolio-lux-body{padding:24px}
+.portfolio-lux-cat{
+  font-size:0.6rem;letter-spacing:0.18em;
+  color:var(--gold);margin-bottom:10px;
+  display:flex;align-items:center;gap:8px;
+}
+.portfolio-lux-cat::before{
+  content:'';
+  width:20px;height:1px;
+  background:var(--gold);
+  display:block;
+}
+.portfolio-lux-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem;font-weight:700;
+  color:#fff;margin-bottom:10px;line-height:1.4;
+}
+.portfolio-lux-card p{
+  font-size:0.8rem;color:rgba(255,255,255,0.45);
+  line-height:1.65;margin-bottom:16px;
+}
+.portfolio-lux-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:14px;
+  border-top:0.5px solid rgba(212,175,55,0.08);
+}
+.portfolio-lux-tag{
+  font-size:0.62rem;
+  color:rgba(212,175,55,0.7);
+  background:rgba(212,175,55,0.07);
+  border:0.5px solid rgba(212,175,55,0.15);
+  border-radius:50px;padding:3px 10px;
+}
+.portfolio-lux-year{
+  font-size:0.68rem;
+  color:rgba(255,255,255,0.3);
+}
+
+/* PORTFOLIO FEATURED */
+.portfolio-featured{
+  margin:0 6% 40px;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(212,175,55,0.06),rgba(212,175,55,0.02));
+  border:0.5px solid rgba(212,175,55,0.18);
+  padding:48px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;align-items:center;
+}
+.portfolio-featured-visual{
+  height:280px;border-radius:16px;
+  background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(212,175,55,0.03));
+  border:0.5px solid rgba(212,175,55,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:5rem;
+}
+.portfolio-feat-label{
+  font-size:0.6rem;letter-spacing:0.2em;
+  color:var(--gold);margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
+}
+.portfolio-feat-label::before{
+  content:'★';font-size:0.5rem;
+}
+.portfolio-featured h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;font-weight:900;
+  color:#fff;margin-bottom:14px;line-height:1.25;
+}
+.portfolio-featured p{
+  font-size:0.88rem;color:rgba(255,255,255,0.5);
+  line-height:1.75;margin-bottom:20px;
+}
+.portfolio-feat-tags{display:flex;flex-wrap:wrap;gap:8px}
+.feat-tag{
+  font-size:0.68rem;
+  color:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.04);
+  border:0.5px solid rgba(255,255,255,0.1);
+  border-radius:50px;padding:4px 12px;
+}
+
+/* ===== BLOG PAGE — REDESIGNED ===== */
+.blog-hero-featured{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:24px;
+  margin:0 6% 16px;
+}
+.blog-featured-card{
+  border-radius:22px;overflow:hidden;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.15);
+  cursor:pointer;transition:all 0.35s;
+  display:flex;flex-direction:column;
+}
+.blog-featured-card:hover{
+  border-color:rgba(212,175,55,0.4);
+  box-shadow:0 16px 50px rgba(0,0,0,0.5);
+}
+.blog-featured-img{
+  height:280px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:4rem;
+  background:linear-gradient(160deg,rgba(212,175,55,0.1),rgba(212,175,55,0.02));
+  border-bottom:0.5px solid rgba(212,175,55,0.1);
+  position:relative;
+}
+.blog-featured-badge{
+  position:absolute;top:16px;left:16px;
+  background:var(--gold);color:#000;
+  font-size:0.6rem;font-weight:700;
+  letter-spacing:0.15em;
+  border-radius:50px;padding:4px 12px;
+  font-family:'Outfit',sans-serif;
+}
+.blog-featured-body{padding:28px;flex:1}
+.blog-featured-meta{
+  display:flex;gap:12px;align-items:center;
+  margin-bottom:14px;
+}
+.blog-featured-cat{
+  font-size:0.62rem;letter-spacing:0.12em;
+  color:var(--gold);
+  background:rgba(212,175,55,0.08);
+  border:0.5px solid rgba(212,175,55,0.2);
+  border-radius:50px;padding:3px 12px;
+}
+.blog-featured-date{
+  font-size:0.7rem;color:rgba(255,255,255,0.3);
+}
+.blog-featured-card h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.35rem;font-weight:700;
+  color:#fff;margin-bottom:12px;line-height:1.35;
+}
+.blog-featured-card p{
+  font-size:0.84rem;color:rgba(255,255,255,0.5);
+  line-height:1.7;margin-bottom:18px;
+}
+.blog-read-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:0.78rem;color:var(--gold);font-weight:600;
+  border-bottom:1px solid rgba(212,175,55,0.3);
+  padding-bottom:2px;
+}
+.blog-side-cards{display:flex;flex-direction:column;gap:16px}
+.blog-side-card{
+  border-radius:16px;overflow:hidden;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.1);
+  cursor:pointer;transition:all 0.3s;
+  display:flex;gap:0;
+}
+.blog-side-card:hover{border-color:rgba(212,175,55,0.32);transform:translateX(4px)}
+.blog-side-img{
+  width:100px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;
+  background:linear-gradient(135deg,rgba(212,175,55,0.08),rgba(212,175,55,0.02));
+  border-right:0.5px solid rgba(212,175,55,0.08);
+}
+.blog-side-body{padding:16px}
+.blog-side-cat{
+  font-size:0.58rem;letter-spacing:0.1em;
+  color:var(--gold);margin-bottom:6px;
+}
+.blog-side-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:0.88rem;font-weight:700;
+  color:#fff;line-height:1.35;margin-bottom:6px;
+}
+.blog-side-date{font-size:0.66rem;color:rgba(255,255,255,0.3)}
+
+.blog-lux-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:0;
+  padding:0 6%;
+}
+.blog-lux-card{
+  border-radius:20px;overflow:hidden;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.1);
+  cursor:pointer;transition:all 0.35s;
+  display:flex;flex-direction:column;
+}
+.blog-lux-card:hover{
+  border-color:rgba(212,175,55,0.35);
+  transform:translateY(-5px);
+  box-shadow:0 16px 50px rgba(0,0,0,0.4);
+}
+.blog-lux-img{
+  height:160px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.8rem;
+  background:linear-gradient(135deg,rgba(212,175,55,0.07),rgba(212,175,55,0.02));
+  border-bottom:0.5px solid rgba(212,175,55,0.08);
+  position:relative;
+}
+.blog-lux-body{padding:22px;flex:1;display:flex;flex-direction:column}
+.blog-lux-meta{
+  display:flex;gap:10px;align-items:center;
+  margin-bottom:10px;
+}
+.blog-lux-cat{
+  font-size:0.6rem;letter-spacing:0.1em;
+  color:var(--gold);
+  background:rgba(212,175,55,0.07);
+  border:0.5px solid rgba(212,175,55,0.18);
+  border-radius:50px;padding:2px 10px;
+}
+.blog-lux-date{font-size:0.66rem;color:rgba(255,255,255,0.3)}
+.blog-lux-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-weight:700;
+  color:#fff;margin-bottom:10px;line-height:1.4;
+}
+.blog-lux-card p{
+  font-size:0.79rem;color:rgba(255,255,255,0.45);
+  line-height:1.65;flex:1;
+}
+.blog-lux-footer{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:0.5px solid rgba(212,175,55,0.08);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.blog-lux-read{
+  font-size:0.73rem;color:var(--gold);font-weight:500;
+  display:flex;align-items:center;gap:5px;
+}
+.blog-lux-time{font-size:0.66rem;color:rgba(255,255,255,0.25)}
+
+/* Newsletter */
+.newsletter-strip{
+  margin:60px 6%;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(212,175,55,0.07),rgba(212,175,55,0.02));
+  border:0.5px solid rgba(212,175,55,0.18);
+  padding:50px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.newsletter-strip::before{
+  content:'';position:absolute;
+  top:-50%;left:50%;transform:translateX(-50%);
+  width:60%;height:100%;
+  background:radial-gradient(ellipse,rgba(212,175,55,0.07),transparent 70%);
+  pointer-events:none;
+}
+.newsletter-strip h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;font-weight:900;
+  color:#fff;margin-bottom:8px;
+  position:relative;
+}
+.newsletter-strip h3 em{
+  font-style:italic;
+  background:linear-gradient(135deg,#D4AF37,#F5D76E,#B8940A);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.newsletter-strip p{
+  font-size:0.9rem;color:rgba(255,255,255,0.5);
+  margin-bottom:28px;position:relative;
+}
+.newsletter-form{
+  display:flex;gap:12px;justify-content:center;
+  max-width:480px;margin:0 auto;
+  position:relative;
+}
+.newsletter-input{
+  flex:1;background:rgba(255,255,255,0.04);
+  border:0.5px solid rgba(212,175,55,0.2);
+  border-radius:50px;padding:13px 22px;
+  color:#fff;font-family:'Outfit',sans-serif;
+  font-size:0.85rem;outline:none;
+  transition:border-color 0.2s;
+}
+.newsletter-input::placeholder{color:rgba(255,255,255,0.25)}
+.newsletter-input:focus{border-color:rgba(212,175,55,0.45)}
+.newsletter-btn{
+  background:linear-gradient(135deg,#D4AF37,#B8940A);
+  color:#000;border:none;
+  border-radius:50px;padding:13px 28px;
+  font-family:'Outfit',sans-serif;
+  font-size:0.84rem;font-weight:600;
+  cursor:pointer;white-space:nowrap;
+  transition:all 0.25s;
+}
+.newsletter-btn:hover{box-shadow:0 6px 20px rgba(212,175,55,0.4)}
+
+/* ===== CONTACT PAGE — REDESIGNED ===== */
+.contact-lux-grid{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:40px;
+  margin-top:56px;
+  align-items:start;
+}
+.contact-lux-left{}
+.contact-lux-tagline{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-weight:700;
+  color:rgba(255,255,255,0.7);
+  line-height:1.6;
+  margin-bottom:32px;
+  font-style:italic;
+  border-left:2px solid var(--gold);
+  padding-left:16px;
+}
+.contact-cards{display:flex;flex-direction:column;gap:16px}
+.contact-lux-card{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:20px 22px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.1);
+  transition:all 0.3s;
+}
+.contact-lux-card:hover{
+  border-color:rgba(212,175,55,0.3);
+  background:rgba(212,175,55,0.03);
+}
+.contact-lux-icon{
+  width:46px;height:46px;
+  border-radius:13px;
+  background:rgba(212,175,55,0.08);
+  border:0.5px solid rgba(212,175,55,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;flex-shrink:0;
+}
+.contact-lux-card h4{
+  font-size:0.82rem;font-weight:600;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:4px;letter-spacing:0.04em;
+}
+.contact-lux-card p{
+  font-size:0.88rem;color:#fff;font-weight:500;
+  line-height:1.5;
+}
+.contact-lux-card small{
+  display:block;
+  font-size:0.72rem;color:rgba(255,255,255,0.35);
+  margin-top:3px;
+}
+.contact-wa-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#25D366;color:#fff;
+  border:none;border-radius:50px;
+  padding:14px 28px;
+  font-family:'Outfit',sans-serif;
+  font-size:0.85rem;font-weight:600;
+  text-decoration:none;cursor:pointer;
+  transition:all 0.3s;
+  margin-top:24px;
+  box-shadow:0 4px 20px rgba(37,211,102,0.25);
+}
+.contact-wa-btn:hover{box-shadow:0 8px 30px rgba(37,211,102,0.4);transform:translateY(-2px)}
+
+.contact-lux-form{
+  background:rgba(255,255,255,0.02);
+  border:0.5px solid rgba(212,175,55,0.15);
+  border-radius:24px;
+  padding:40px;
+  position:relative;overflow:hidden;
+}
+.contact-lux-form::before{
+  content:'';position:absolute;
+  top:-30%;right:-20%;
+  width:300px;height:300px;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(212,175,55,0.04),transparent 70%);
+  pointer-events:none;
+}
+.form-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;font-weight:700;
+  color:#fff;margin-bottom:6px;
+}
+.form-subtitle{
+  font-size:0.82rem;color:rgba(255,255,255,0.4);
+  margin-bottom:28px;line-height:1.6;
+}
+.lux-form-group{margin-bottom:20px}
+.lux-form-group label{
+  display:block;
+  font-size:0.7rem;
+  color:rgba(255,255,255,0.45);
+  letter-spacing:0.1em;
+  margin-bottom:8px;
+  font-weight:500;
+}
+.lux-input{
+  width:100%;
+  background:rgba(255,255,255,0.03);
+  border:0.5px solid rgba(212,175,55,0.15);
+  border-radius:12px;
+  padding:13px 16px;
+  color:#fff;
+  font-family:'Outfit',sans-serif;
+  font-size:0.88rem;
+  outline:none;
+  transition:all 0.25s;
+  -webkit-appearance:none;
+}
+.lux-input::placeholder{color:rgba(255,255,255,0.2)}
+.lux-input:focus{
+  border-color:rgba(212,175,55,0.45);
+  background:rgba(212,175,55,0.02);
+  box-shadow:0 0 0 3px rgba(212,175,55,0.05);
+}
+.lux-textarea{min-height:120px;resize:vertical}
+.lux-select option{background:#111;color:#fff}
+.lux-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.lux-submit{
+  width:100%;
+  background:linear-gradient(135deg,#D4AF37,#E8C84A,#B8940A);
+  color:#000;border:none;
+  border-radius:50px;
+  padding:15px;
+  font-size:0.9rem;font-weight:700;
+  font-family:'Outfit',sans-serif;
+  cursor:pointer;letter-spacing:0.04em;
+  transition:all 0.3s;margin-top:8px;
+  box-shadow:0 4px 20px rgba(212,175,55,0.2);
+}
+.lux-submit:hover{
+  box-shadow:0 8px 32px rgba(212,175,55,0.45);
+  transform:translateY(-2px);
+}
+.lux-form-success{
+  display:none;
+  text-align:center;padding:32px;
+  color:var(--gold);
+}
+.lux-form-success h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;margin-bottom:8px;
+}
+.lux-form-success p{font-size:0.85rem;color:rgba(255,255,255,0.5)}
+
+/* CONTACT MAP STRIP */
+.contact-map-strip{
+  margin:0 6% 60px;
+  border-radius:20px;
+  background:rgba(212,175,55,0.04);
+  border:0.5px solid rgba(212,175,55,0.12);
+  padding:32px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;flex-wrap:wrap;
+}
+.contact-map-item{text-align:center}
+.contact-map-item h4{
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;font-weight:700;
+  color:var(--gold);margin-bottom:4px;
+}
+.contact-map-item p{
+  font-size:0.78rem;color:rgba(255,255,255,0.4);
+}
+
 /* ===== RESPONSIVE ===== */
+@media(max-width:1100px){
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .services-full-grid{grid-template-columns:repeat(2,1fr)}
+  .process-luxury-steps{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:900px){
   .nav-links{display:none}.btn-login{display:none}.hamburger{display:flex}
   .about-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .process-step:not(:last-child)::after{display:none}
+  .about-story-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .portfolio-lux-grid{grid-template-columns:1fr 1fr}
+  .blog-hero-featured{grid-template-columns:1fr}
+  .blog-lux-grid{grid-template-columns:1fr 1fr}
+  .contact-lux-grid{grid-template-columns:1fr}
+  .svc-cta-strip{flex-direction:column;padding:36px 28px}
+  .portfolio-featured{grid-template-columns:1fr;padding:32px}
 }
 @media(max-width:600px){
   h1.hero-h1{font-size:2.4rem}.badge-title{font-size:1.6rem}
@@ -245,6 +1200,18 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
   #aiChatPanel{width:calc(100vw - 24px);left:12px;bottom:90px;height:62vh}
   .footer-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
   .section{padding:60px 5%}
+  .services-full-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .portfolio-lux-grid{grid-template-columns:1fr}
+  .blog-lux-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .process-luxury-steps{grid-template-columns:1fr}
+  .page-hero{padding:70px 5% 50px}
+  .lux-form-row{grid-template-columns:1fr}
+  .contact-lux-form{padding:24px}
+  .newsletter-strip{padding:32px 20px}
+  .newsletter-form{flex-direction:column}
+  .newsletter-btn{text-align:center}
 }
 </style>
 </head>
@@ -375,44 +1342,167 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
 
 <!-- ===================== ABOUT PAGE ===================== -->
 <div id="about-page" class="page">
-  <div class="section">
-    <span class="section-label">WHO WE ARE</span>
-    <h2 class="section-title">Africa's Premier<br><em>Research Partner</em></h2>
-    <div class="divider"></div>
-    <div class="about-grid">
-      <div>
-        <p class="section-sub" style="margin-bottom:20px">Founded to bridge Africa's data and research gap, 3WISE Research Hub delivers world-class methodologies to students, NGOs, startups, corporations, and government agencies across the continent.</p>
-        <p style="font-size:0.84rem;color:rgba(255,255,255,0.4);line-height:1.8;margin-bottom:24px">We believe that great decisions begin with great research. Our team of expert researchers, data scientists, and analysts bring global standards to local contexts — helping our clients unlock insights that drive real change.</p>
-        <div class="about-values">
-          <div class="value-item"><div class="value-dot"></div><div><h4>Excellence</h4><p>Every project meets international research standards with rigorous methodology and quality assurance.</p></div></div>
-          <div class="value-item"><div class="value-dot"></div><div><h4>Integrity</h4><p>We uphold the highest standards of research ethics, data privacy, and academic honesty.</p></div></div>
-          <div class="value-item"><div class="value-dot"></div><div><h4>Pan-African Impact</h4><p>Our insights are designed to drive development across Nigeria, Ghana, Kenya, South Africa, and beyond.</p></div></div>
-          <div class="value-item"><div class="value-dot"></div><div><h4>Innovation</h4><p>We combine traditional research expertise with modern AI-powered analytics for unmatched depth.</p></div></div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-deco">3W</div>
+    <div class="page-hero-label">WHO WE ARE</div>
+    <h1>Africa's Most Trusted<br><em>Research Partner</em></h1>
+    <p>Founded to bridge Africa's data and intelligence gap — delivering world-class methodologies to students, NGOs, startups, corporations, and governments across the continent.</p>
+  </div>
+
+  <!-- Story Section -->
+  <div class="about-story-section">
+    <div class="about-story-grid">
+      <div class="about-story-content">
+        <span class="section-label">OUR STORY</span>
+        <h2 class="section-title">Built on a <em>Mission</em><br>to Empower Africa</h2>
+        <div class="divider"></div>
+        <p>3WISE Research Hub was born from a simple but powerful belief: that Africa's greatest decisions deserve Africa's best research. We saw brilliant students struggling with data, businesses making million-naira choices on guesswork, and NGOs writing proposals without evidence. We decided to change that.</p>
+        <p>Founded by Samuel Stephen, our firm brings global research standards to local contexts — combining rigorous academic methodology with deep, boots-on-the-ground knowledge of African markets, cultures, and challenges.</p>
+        <p>Today, we serve clients across Nigeria, Ghana, Kenya, South Africa, and 12+ African countries, delivering research that doesn't just sit in reports — it drives real decisions, secures real funding, and creates real impact.</p>
+        <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+          <button class="btn-primary" onclick="showPage('contact')">Work With Us</button>
+          <button class="btn-secondary" onclick="showPage('portfolio')">See Our Work</button>
         </div>
       </div>
-      <div class="about-img-wrap">
-        <div class="about-img-box">🌍
-          <div class="about-accent"><strong>8+</strong><span>YEARS</span></div>
+      <div class="about-story-visual">
+        <div class="about-story-img">🌍
+          <div class="about-story-badge">
+            <strong>8+</strong>
+            <span>YEARS</span>
+          </div>
+          <div class="about-story-badge2">
+            <strong>500+</strong>
+            <span>PROJECTS</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="gold-line"></div>
+
+  <!-- Values -->
+  <div class="values-section">
+    <div style="text-align:center">
+      <span class="section-label">WHAT DRIVES US</span>
+      <h2 class="section-title">Our Core <em>Values</em></h2>
+      <div class="divider" style="margin:16px auto"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-card-num">01</div>
+        <div class="value-card-icon">🏆</div>
+        <h3>Excellence</h3>
+        <p>Every deliverable meets international research standards. We never compromise on methodology, accuracy, or quality of insight.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-num">02</div>
+        <div class="value-card-icon">⚖️</div>
+        <h3>Integrity</h3>
+        <p>We uphold the highest standards of research ethics, data privacy, and academic honesty in every project we undertake.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-num">03</div>
+        <div class="value-card-icon">🌍</div>
+        <h3>Pan-African Impact</h3>
+        <p>Our insights are designed to drive development across Nigeria, Ghana, Kenya, South Africa, and beyond — rooted in African realities.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-num">04</div>
+        <div class="value-card-icon">🤖</div>
+        <h3>Innovation</h3>
+        <p>We fuse traditional research expertise with cutting-edge AI-powered analytics, delivering unprecedented depth and speed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-line"></div>
+
+  <!-- Team -->
+  <div class="team-section">
+    <div style="text-align:center">
+      <span class="section-label">OUR PEOPLE</span>
+      <h2 class="section-title">Meet the <em>Team</em></h2>
+      <div class="divider" style="margin:16px auto"></div>
+      <p style="color:rgba(255,255,255,0.45);font-size:0.95rem;max-width:500px;margin:0 auto">Young, passionate researchers with global perspectives and deep African roots.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-card-top">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,175,55,0.06),rgba(212,175,55,0.01))"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#D4AF37,#B8940A)">SS</div>
+        </div>
+        <div class="team-card-body">
+          <h3>Samuel Stephen</h3>
+          <div class="team-card-role">Founder & Lead Researcher</div>
+          <p>Visionary leader with 8+ years in research consulting. Expert in market intelligence, academic research design, and African development economics.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-top">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,175,55,0.06),rgba(212,175,55,0.01))"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#B8940A,#9A7E26)">ES</div>
+        </div>
+        <div class="team-card-body">
+          <h3>Eunice Stephen</h3>
+          <div class="team-card-role">Data Analyst & Research Expert</div>
+          <p>Specializes in quantitative data analysis, SPSS, R, and Python. Brings precision and clarity to complex datasets across health, education, and finance sectors.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-top">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,175,55,0.06),rgba(212,175,55,0.01))"></div>
+          <div class="team-avatar" style="background:linear-gradient(135deg,#E8C84A,#D4AF37)">DC</div>
+        </div>
+        <div class="team-card-body">
+          <h3>Daniel Cyrus</h3>
+          <div class="team-card-role">Chief Engineering Officer</div>
+          <p>Leads prototyping, embedded systems, and IoT research projects. Bridges the gap between technological innovation and evidence-based research methodology.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-line"></div>
+
   <!-- Process -->
-  <div class="section section-alt">
+  <div class="process-luxury">
     <div style="text-align:center">
       <span class="section-label">HOW WE WORK</span>
       <h2 class="section-title">Our <em>Process</em></h2>
       <div class="divider" style="margin:16px auto"></div>
     </div>
-    <div class="process-steps">
-      <div class="process-step"><div class="step-num">01</div><h4>Consultation</h4><p>We understand your goals, timeline, and requirements in a free discovery call.</p></div>
-      <div class="process-step"><div class="step-num">02</div><h4>Proposal</h4><p>We send a detailed research proposal and quote within 24 hours.</p></div>
-      <div class="process-step"><div class="step-num">03</div><h4>Execution</h4><p>Our expert team executes the research with precision and regular updates.</p></div>
-      <div class="process-step"><div class="step-num">04</div><h4>Delivery</h4><p>You receive a polished report with findings, recommendations, and full data files.</p></div>
+    <div class="process-luxury-steps">
+      <div class="process-lux-card">
+        <div class="process-lux-num">01</div>
+        <div class="process-lux-icon">💬</div>
+        <h4>Free Consultation</h4>
+        <p>We understand your goals, timeline, and requirements in a no-obligation discovery call. Zero pressure, maximum clarity.</p>
+      </div>
+      <div class="process-lux-card">
+        <div class="process-lux-num">02</div>
+        <div class="process-lux-icon">📋</div>
+        <h4>Research Proposal</h4>
+        <p>We send a detailed research proposal, methodology outline, and transparent quote within 24 hours of your brief.</p>
+      </div>
+      <div class="process-lux-card">
+        <div class="process-lux-num">03</div>
+        <div class="process-lux-icon">⚙️</div>
+        <h4>Expert Execution</h4>
+        <p>Our expert team executes the research with precision, keeping you updated at every milestone throughout the process.</p>
+      </div>
+      <div class="process-lux-card">
+        <div class="process-lux-num">04</div>
+        <div class="process-lux-icon">🏆</div>
+        <h4>Premium Delivery</h4>
+        <p>You receive a polished final report with findings, recommendations, full data files, and post-delivery support.</p>
+      </div>
     </div>
   </div>
 
+  <!-- Stats -->
   <div class="stats-bar">
     <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">PROJECTS COMPLETED</div></div>
     <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">CLIENT SATISFACTION</div></div>
@@ -423,97 +1513,538 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
 
 <!-- ===================== SERVICES PAGE ===================== -->
 <div id="services-page" class="page">
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-deco">SVC</div>
+    <div class="page-hero-label">WHAT WE OFFER</div>
+    <h1>Research Services That<br><em>Move the Needle</em></h1>
+    <p>Comprehensive, world-class research solutions for every stage of your academic or business journey — from thesis support to enterprise intelligence.</p>
+  </div>
+
+  <!-- Services Full Grid -->
   <div class="section">
-    <span class="section-label">OUR SERVICES</span>
-    <h2 class="section-title">Everything You Need<br>to <em>Research Right</em></h2>
+    <span class="section-label">ALL SERVICES</span>
+    <h2 class="section-title">Everything You Need to<br><em>Research Right</em></h2>
     <div class="divider"></div>
-    <p class="section-sub">Comprehensive research solutions for every stage of your academic or business journey.</p>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">📚</div><h3>Academic Research & Thesis Support</h3><p>Full support from topic selection to defence — literature reviews, data collection, analysis, writing, and presentation coaching. MSc & PhD speciality.</p><span class="service-tag">FROM ₦15,000</span></div>
-      <div class="service-card"><div class="service-icon">📊</div><h3>Market Research & Business Intelligence</h3><p>Consumer insights, competitor mapping, industry sizing, and feasibility studies designed for African markets and investor presentations.</p><span class="service-tag">FROM ₦80,000</span></div>
-      <div class="service-card"><div class="service-icon">🔢</div><h3>Data Analysis & Statistics</h3><p>SPSS, R, Python, Stata, and Excel. Quantitative and qualitative analysis with clear visualisations and interpretations ready for publication.</p><span class="service-tag">FROM ₦20,000</span></div>
-      <div class="service-card"><div class="service-icon">📋</div><h3>Survey Design & Fieldwork</h3><p>Expert questionnaire design, online and offline data collection, sampling strategy, and clean, ready-to-analyse datasets.</p><span class="service-tag">FROM ₦35,000</span></div>
-      <div class="service-card"><div class="service-icon">📝</div><h3>Policy Research & Report Writing</h3><p>Evidence-based policy briefs, white papers, impact assessments, and stakeholder reports for government agencies and NGOs.</p><span class="service-tag">FROM ₦60,000</span></div>
-      <div class="service-card"><div class="service-icon">💰</div><h3>Grant Proposal Writing</h3><p>Compelling funding applications, M&E frameworks, and capacity statements for World Bank, AfDB, USAID, and private foundations.</p><span class="service-tag">FROM ₦50,000</span></div>
+    <div class="services-full-grid">
+      <div class="svc-card-lux">
+        <div class="svc-card-number">01</div>
+        <div class="svc-card-icon-lux">📚</div>
+        <h3>Academic Research & Thesis Support</h3>
+        <p>Full support from topic selection to defence — literature reviews, data collection, analysis, writing, and presentation coaching. MSc & PhD speciality. We've helped 300+ students succeed.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦15,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">02</div>
+        <div class="svc-card-icon-lux">📊</div>
+        <h3>Market Research & Business Intelligence</h3>
+        <p>Consumer insights, competitor mapping, industry sizing, and feasibility studies designed for African markets and investor presentations. Bankable, credible data.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦80,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">03</div>
+        <div class="svc-card-icon-lux">🔢</div>
+        <h3>Data Analysis & Statistics</h3>
+        <p>SPSS, R, Python, Stata, and Excel. Quantitative and qualitative analysis with clear visualisations and interpretations ready for publication or board presentation.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦20,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">04</div>
+        <div class="svc-card-icon-lux">📋</div>
+        <h3>Survey Design & Fieldwork</h3>
+        <p>Expert questionnaire design, online and offline data collection, sampling strategy, and clean, ready-to-analyse datasets with full methodology documentation.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦35,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">05</div>
+        <div class="svc-card-icon-lux">📝</div>
+        <h3>Policy Research & Report Writing</h3>
+        <p>Evidence-based policy briefs, white papers, impact assessments, and stakeholder reports for government agencies and NGOs. Shareholder-ready, publication-quality.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦60,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">06</div>
+        <div class="svc-card-icon-lux">💰</div>
+        <h3>Grant Proposal Writing</h3>
+        <p>Compelling funding applications, M&E frameworks, and capacity statements for World Bank, AfDB, USAID, Tony Elumelu Foundation, and private funders.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦50,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">07</div>
+        <div class="svc-card-icon-lux">🏥</div>
+        <h3>Healthcare Research</h3>
+        <p>Health systems research, patient studies, epidemiological surveys, and clinical data analysis — meeting IRB and ethical committee standards.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦45,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">08</div>
+        <div class="svc-card-icon-lux">🌱</div>
+        <h3>Environmental & ESG Research</h3>
+        <p>Sustainability audits, ESG reporting frameworks, and environmental impact studies — supporting businesses and governments on their green transition.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦55,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
+      <div class="svc-card-lux">
+        <div class="svc-card-number">09</div>
+        <div class="svc-card-icon-lux">📈</div>
+        <h3>Monitoring & Evaluation</h3>
+        <p>Results-based M&E frameworks, baseline surveys, mid-term reviews, and impact evaluations for development projects and social programmes.</p>
+        <div class="svc-card-footer">
+          <span class="svc-price">FROM ₦70,000</span>
+          <div class="svc-arrow" onclick="showPage('contact')">→</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="section section-alt" style="text-align:center">
-    <span class="section-label">READY TO START?</span>
-    <h2 class="section-title">Let's Build Your <em>Research</em></h2>
-    <p class="section-sub" style="margin:16px auto 32px">Contact us today for a free consultation and quote within 24 hours.</p>
-    <button class="btn-primary" onclick="showPage('contact')">Get a Free Quote →</button>
+  <!-- CTA Strip -->
+  <div class="svc-cta-strip">
+    <div class="svc-cta-text">
+      <h3>Ready to Start Your<br><em>Research Journey?</em></h3>
+      <p>Contact us today for a free consultation and receive a detailed quote within 24 hours. No commitment required.</p>
+    </div>
+    <div class="svc-cta-btns">
+      <button class="btn-primary" onclick="showPage('contact')">Get a Free Quote →</button>
+      <a href="https://wa.me/2349069340228" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;border:none;border-radius:50px;padding:14px 28px;font-family:'Outfit',sans-serif;font-size:0.9rem;font-weight:600;text-decoration:none;white-space:nowrap">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.83L.043 23.25c-.096.345.008.714.27.952.195.179.451.275.71.275a1 1 0 0 0 .299-.046l5.584-1.777A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.668-.5-5.217-1.378L2.5 21.862l1.252-4.2A10 10 0 1 1 12 22z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="section section-alt">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="section-label">WHY 3WISE</span>
+      <h2 class="section-title">The 3WISE <em>Advantage</em></h2>
+      <div class="divider" style="margin:16px auto"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px">
+      <div style="text-align:center;padding:32px 20px;border-radius:20px;background:rgba(255,255,255,0.02);border:0.5px solid rgba(212,175,55,0.1);transition:all 0.3s" onmouseover="this.style.borderColor='rgba(212,175,55,0.35)'" onmouseout="this.style.borderColor='rgba(212,175,55,0.1)'">
+        <div style="font-size:2rem;margin-bottom:16px">🏅</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:10px">Affordable Pricing</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65">Premium quality research at student-friendly and business-competitive rates.</p>
+      </div>
+      <div style="text-align:center;padding:32px 20px;border-radius:20px;background:rgba(255,255,255,0.02);border:0.5px solid rgba(212,175,55,0.1);transition:all 0.3s" onmouseover="this.style.borderColor='rgba(212,175,55,0.35)'" onmouseout="this.style.borderColor='rgba(212,175,55,0.1)'">
+        <div style="font-size:2rem;margin-bottom:16px">⚡</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:10px">Fast Turnaround</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65">Quick delivery without compromising on quality. Quotes in 24 hours, delivery from 48 hours.</p>
+      </div>
+      <div style="text-align:center;padding:32px 20px;border-radius:20px;background:rgba(255,255,255,0.02);border:0.5px solid rgba(212,175,55,0.1);transition:all 0.3s" onmouseover="this.style.borderColor='rgba(212,175,55,0.35)'" onmouseout="this.style.borderColor='rgba(212,175,55,0.1)'">
+        <div style="font-size:2rem;margin-bottom:16px">🌍</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:10px">Local Expertise</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65">Deep understanding of Nigerian and African markets — not generic templates.</p>
+      </div>
+      <div style="text-align:center;padding:32px 20px;border-radius:20px;background:rgba(255,255,255,0.02);border:0.5px solid rgba(212,175,55,0.1);transition:all 0.3s" onmouseover="this.style.borderColor='rgba(212,175,55,0.35)'" onmouseout="this.style.borderColor='rgba(212,175,55,0.1)'">
+        <div style="font-size:2rem;margin-bottom:16px">✨</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:10px">AI-Powered Depth</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.65">We combine human expertise with AI tools to deliver unmatched analytical depth.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- ===================== PORTFOLIO PAGE ===================== -->
 <div id="portfolio-page" class="page">
-  <div class="section">
-    <span class="section-label">OUR WORK</span>
-    <h2 class="section-title">Selected <em>Projects</em></h2>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-deco">PORT</div>
+    <div class="page-hero-label">OUR WORK</div>
+    <h1>Research That Created<br><em>Real Impact</em></h1>
+    <p>A curated selection of the research excellence we've delivered for clients across Africa — from PhD candidates to Fortune-level institutions.</p>
+  </div>
+
+  <!-- Featured Project -->
+  <div class="portfolio-featured">
+    <div class="portfolio-featured-visual">📈</div>
+    <div>
+      <div class="portfolio-feat-label">FEATURED PROJECT</div>
+      <h3>Nigeria Fintech Consumer Adoption Study 2024</h3>
+      <p>A landmark survey of 1,200+ respondents across all 6 geopolitical zones of Nigeria, examining mobile banking adoption patterns, trust barriers, and digital literacy gaps — commissioned by a leading fintech startup seeking Series A investment.</p>
+      <div class="portfolio-feat-tags">
+        <span class="feat-tag">Market Research</span>
+        <span class="feat-tag">1,200 Respondents</span>
+        <span class="feat-tag">6 Zones</span>
+        <span class="feat-tag">Quantitative</span>
+        <span class="feat-tag">2024</span>
+      </div>
+      <div style="margin-top:24px">
+        <button class="btn-primary" onclick="showPage('contact')">Start a Similar Project</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter + Grid -->
+  <div class="section" style="padding-top:20px">
+    <span class="section-label">ALL PROJECTS</span>
+    <h2 class="section-title">Selected <em>Case Studies</em></h2>
     <div class="divider"></div>
-    <p class="section-sub">A sample of the research excellence we've delivered for clients across Africa.</p>
-    <div class="portfolio-grid">
-      <div class="portfolio-card"><div class="portfolio-img">📈</div><div class="portfolio-body"><div class="portfolio-cat">MARKET RESEARCH</div><h3>Nigeria Fintech Consumer Adoption Study 2024</h3><p>A comprehensive survey of 1,200 respondents across 6 geopolitical zones on mobile banking adoption patterns, for a leading fintech startup.</p></div></div>
-      <div class="portfolio-card"><div class="portfolio-img">🎓</div><div class="portfolio-body"><div class="portfolio-cat">ACADEMIC RESEARCH</div><h3>PhD Thesis: Climate Change & Agricultural Output in West Africa</h3><p>Full data collection, econometric modelling, and thesis writing support for a University of Ibadan doctoral candidate.</p></div></div>
-      <div class="portfolio-card"><div class="portfolio-img">🏛️</div><div class="portfolio-body"><div class="portfolio-cat">POLICY RESEARCH</div><h3>Youth Unemployment Policy Brief — ECOWAS</h3><p>Evidence-based policy recommendations on youth employment frameworks for presentation to ECOWAS ministerial committee.</p></div></div>
-      <div class="portfolio-card"><div class="portfolio-img">💊</div><div class="portfolio-body"><div class="portfolio-cat">HEALTH RESEARCH</div><h3>Maternal Health Access in Rural Northern Nigeria</h3><p>Mixed-methods study funded by a UK-based NGO examining barriers to skilled birth attendance in Sokoto and Kebbi States.</p></div></div>
-      <div class="portfolio-card"><div class="portfolio-img">🏢</div><div class="portfolio-body"><div class="portfolio-cat">FEASIBILITY STUDY</div><h3>Agritech Investment Feasibility — East Africa</h3><p>Market sizing, competitive analysis, and financial modelling for a $2M agritech fund considering expansion into Kenya and Rwanda.</p></div></div>
-      <div class="portfolio-card"><div class="portfolio-img">📡</div><div class="portfolio-body"><div class="portfolio-cat">GRANT PROPOSAL</div><h3>Digital Literacy Grant — Tony Elumelu Foundation</h3><p>Successful grant proposal securing ₦25M for a Lagos-based edtech startup's digital literacy programme for underserved youth.</p></div></div>
+    <div class="portfolio-filter">
+      <button class="filter-btn active">All Work</button>
+      <button class="filter-btn">Market Research</button>
+      <button class="filter-btn">Academic</button>
+      <button class="filter-btn">Policy</button>
+      <button class="filter-btn">Health</button>
+      <button class="filter-btn">Grants</button>
+    </div>
+    <div class="portfolio-lux-grid">
+      <div class="portfolio-lux-card">
+        <div class="portfolio-lux-img">
+          <span>📈</span>
+          <div class="portfolio-lux-overlay"><button class="portfolio-overlay-btn">View Project</button></div>
+        </div>
+        <div class="portfolio-lux-body">
+          <div class="portfolio-lux-cat">MARKET RESEARCH</div>
+          <h3>Nigeria Fintech Consumer Adoption Study</h3>
+          <p>Comprehensive survey of 1,200 respondents across 6 zones on mobile banking adoption for a leading fintech startup.</p>
+          <div class="portfolio-lux-footer">
+            <span class="portfolio-lux-tag">Quantitative</span>
+            <span class="portfolio-lux-year">2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-lux-card">
+        <div class="portfolio-lux-img">
+          <span>🎓</span>
+          <div class="portfolio-lux-overlay"><button class="portfolio-overlay-btn">View Project</button></div>
+        </div>
+        <div class="portfolio-lux-body">
+          <div class="portfolio-lux-cat">ACADEMIC RESEARCH</div>
+          <h3>PhD Thesis: Climate Change & Agricultural Output in West Africa</h3>
+          <p>Full data collection, econometric modelling, and thesis writing support for a University of Ibadan doctoral candidate.</p>
+          <div class="portfolio-lux-footer">
+            <span class="portfolio-lux-tag">Mixed Methods</span>
+            <span class="portfolio-lux-year">2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-lux-card">
+        <div class="portfolio-lux-img">
+          <span>🏛️</span>
+          <div class="portfolio-lux-overlay"><button class="portfolio-overlay-btn">View Project</button></div>
+        </div>
+        <div class="portfolio-lux-body">
+          <div class="portfolio-lux-cat">POLICY RESEARCH</div>
+          <h3>Youth Unemployment Policy Brief — ECOWAS</h3>
+          <p>Evidence-based policy recommendations on youth employment frameworks for ECOWAS ministerial committee presentation.</p>
+          <div class="portfolio-lux-footer">
+            <span class="portfolio-lux-tag">Policy Brief</span>
+            <span class="portfolio-lux-year">2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-lux-card">
+        <div class="portfolio-lux-img">
+          <span>💊</span>
+          <div class="portfolio-lux-overlay"><button class="portfolio-overlay-btn">View Project</button></div>
+        </div>
+        <div class="portfolio-lux-body">
+          <div class="portfolio-lux-cat">HEALTH RESEARCH</div>
+          <h3>Maternal Health Access in Rural Northern Nigeria</h3>
+          <p>Mixed-methods study funded by a UK-based NGO examining barriers to skilled birth attendance in Sokoto and Kebbi States.</p>
+          <div class="portfolio-lux-footer">
+            <span class="portfolio-lux-tag">Mixed Methods</span>
+            <span class="portfolio-lux-year">2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-lux-card">
+        <div class="portfolio-lux-img">
+          <span>🏢</span>
+          <div class="portfolio-lux-overlay"><button class="portfolio-overlay-btn">View Project</button></div>
+        </div>
+        <div class="portfolio-lux-body">
+          <div class="portfolio-lux-cat">FEASIBILITY STUDY</div>
+          <h3>Agritech Investment Feasibility — East Africa</h3>
+          <p>Market sizing, competitive analysis, and financial modelling for a $2M agritech fund considering Kenya and Rwanda expansion.</p>
+          <div class="portfolio-lux-footer">
+            <span class="portfolio-lux-tag">Feasibility</span>
+            <span class="portfolio-lux-year">2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-lux-card">
+        <div class="portfolio-lux-img">
+          <span>📡</span>
+          <div class="portfolio-lux-overlay"><button class="portfolio-overlay-btn">View Project</button></div>
+        </div>
+        <div class="portfolio-lux-body">
+          <div class="portfolio-lux-cat">GRANT PROPOSAL</div>
+          <h3>Digital Literacy Grant — Tony Elumelu Foundation</h3>
+          <p>Successful grant proposal securing ₦25M for a Lagos-based edtech startup's digital literacy programme for underserved youth.</p>
+          <div class="portfolio-lux-footer">
+            <span class="portfolio-lux-tag">Grant Writing</span>
+            <span class="portfolio-lux-year">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials on Portfolio -->
+  <div class="testimonials">
+    <div style="text-align:center">
+      <span class="section-label">CLIENT VOICES</span>
+      <h2 class="section-title">What Clients <em>Say</em></h2>
+    </div>
+    <div class="testi-grid" style="margin-top:40px">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"3WISE transformed my PhD research. Their data analysis was exceptional — I defended successfully on first attempt."</p>
+        <div class="testi-author"><div class="testi-avatar">AO</div><div><div class="testi-name">Dr. Adaeze Okafor</div><div class="testi-role">PhD Graduate, University of Lagos</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The market research report 3WISE delivered helped us secure ₦50M in funding. Absolutely world-class work."</p>
+        <div class="testi-author"><div class="testi-avatar">EI</div><div><div class="testi-name">Emmanuel Ike</div><div class="testi-role">CEO, IkeTech Ventures</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Fast, professional, and deeply knowledgeable about African policy contexts. Our go-to research partner."</p>
+        <div class="testi-author"><div class="testi-avatar">FM</div><div><div class="testi-name">Fatima Musa</div><div class="testi-role">Programme Officer, USAID Nigeria</div></div></div>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- ===================== BLOG PAGE ===================== -->
 <div id="blog-page" class="page">
-  <div class="section">
-    <span class="section-label">INSIGHTS & IDEAS</span>
-    <h2 class="section-title">The 3WISE <em>Research Blog</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Expert perspectives on research, data, and Africa's development landscape.</p>
-    <div class="blog-grid">
-      <div class="blog-card"><div class="blog-cover">🧠</div><div class="blog-body"><div class="blog-meta"><span class="blog-cat">METHODOLOGY</span><span class="blog-date">April 2025</span></div><h3>How to Choose the Right Research Methodology for Your African Market Study</h3><p>Qualitative vs quantitative, mixed methods, and when to use each — a practical guide for researchers working in African contexts.</p><div class="blog-read">Read Article →</div></div></div>
-      <div class="blog-card"><div class="blog-cover">📊</div><div class="blog-body"><div class="blog-meta"><span class="blog-cat">DATA SCIENCE</span><span class="blog-date">March 2025</span></div><h3>5 Common SPSS Mistakes Nigerian PhD Students Make (And How to Fix Them)</h3><p>From violating assumptions to misreading p-values — the most costly statistical errors we see in thesis submissions and how to avoid them.</p><div class="blog-read">Read Article →</div></div></div>
-      <div class="blog-card"><div class="blog-cover">🌍</div><div class="blog-body"><div class="blog-meta"><span class="blog-cat">AFRICA INSIGHTS</span><span class="blog-date">February 2025</span></div><h3>AfCFTA and the Research Opportunity: What Businesses Need to Know</h3><p>How the African Continental Free Trade Area is creating new demand for market intelligence and what smart businesses are doing about it.</p><div class="blog-read">Read Article →</div></div></div>
-      <div class="blog-card"><div class="blog-cover">💡</div><div class="blog-body"><div class="blog-meta"><span class="blog-cat">GRANTS</span><span class="blog-date">January 2025</span></div><h3>Writing a Winning Grant Proposal: The 3WISE Framework</h3><p>A step-by-step breakdown of what funding bodies like the Gates Foundation and Tony Elumelu Foundation actually want to see in proposals.</p><div class="blog-read">Read Article →</div></div></div>
-      <div class="blog-card"><div class="blog-cover">🤖</div><div class="blog-body"><div class="blog-meta"><span class="blog-cat">AI & RESEARCH</span><span class="blog-date">December 2024</span></div><h3>Can AI Replace Research Analysts in Africa? Our Honest Assessment</h3><p>We examine where AI genuinely helps researchers, where it falls short, and why human expertise remains irreplaceable in African contexts.</p><div class="blog-read">Read Article →</div></div></div>
-      <div class="blog-card"><div class="blog-cover">🎓</div><div class="blog-body"><div class="blog-meta"><span class="blog-cat">ACADEMIC</span><span class="blog-date">November 2024</span></div><h3>PhD Defence Day: A Checklist for Nigerian Doctoral Candidates</h3><p>Everything you need to prepare — from anticipating committee questions to formatting your final submission for JAMB and university requirements.</p><div class="blog-read">Read Article →</div></div></div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-deco">BLG</div>
+    <div class="page-hero-label">INSIGHTS & IDEAS</div>
+    <h1>The 3WISE<br><em>Research Blog</em></h1>
+    <p>Expert perspectives on research methodology, data science, and Africa's rapidly evolving development landscape — from our team of practitioners.</p>
+  </div>
+
+  <!-- Featured + Side -->
+  <div style="padding:60px 6% 0">
+    <span class="section-label">EDITOR'S PICKS</span>
+    <h2 class="section-title" style="margin-bottom:32px">Must-Read <em>Articles</em></h2>
+  </div>
+  <div class="blog-hero-featured">
+    <div class="blog-featured-card">
+      <div class="blog-featured-img">
+        🧠
+        <div class="blog-featured-badge">FEATURED</div>
+      </div>
+      <div class="blog-featured-body">
+        <div class="blog-featured-meta">
+          <span class="blog-featured-cat">METHODOLOGY</span>
+          <span class="blog-featured-date">April 2025</span>
+        </div>
+        <h2>How to Choose the Right Research Methodology for Your African Market Study</h2>
+        <p>Qualitative vs quantitative, mixed methods, and when to use each — a practical, no-fluff guide for researchers working in complex African contexts where data is scarce and cultural nuance is everything.</p>
+        <span class="blog-read-link">Read Full Article →</span>
+      </div>
+    </div>
+    <div class="blog-side-cards">
+      <div class="blog-side-card">
+        <div class="blog-side-img">📊</div>
+        <div class="blog-side-body">
+          <div class="blog-side-cat">DATA SCIENCE</div>
+          <h3>5 Common SPSS Mistakes Nigerian PhD Students Make</h3>
+          <div class="blog-side-date">March 2025 · 7 min read</div>
+        </div>
+      </div>
+      <div class="blog-side-card">
+        <div class="blog-side-img">🌍</div>
+        <div class="blog-side-body">
+          <div class="blog-side-cat">AFRICA INSIGHTS</div>
+          <h3>AfCFTA and the Research Opportunity: What Businesses Need to Know</h3>
+          <div class="blog-side-date">February 2025 · 9 min read</div>
+        </div>
+      </div>
+      <div class="blog-side-card">
+        <div class="blog-side-img">💡</div>
+        <div class="blog-side-body">
+          <div class="blog-side-cat">GRANTS</div>
+          <h3>Writing a Winning Grant Proposal: The 3WISE Framework</h3>
+          <div class="blog-side-date">January 2025 · 12 min read</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Articles -->
+  <div style="padding:60px 6% 20px">
+    <span class="section-label">ALL ARTICLES</span>
+    <h2 class="section-title" style="margin-bottom:32px">Latest <em>From Our Team</em></h2>
+  </div>
+  <div class="blog-lux-grid">
+    <div class="blog-lux-card">
+      <div class="blog-lux-img">🤖</div>
+      <div class="blog-lux-body">
+        <div class="blog-lux-meta">
+          <span class="blog-lux-cat">AI & RESEARCH</span>
+          <span class="blog-lux-date">December 2024</span>
+        </div>
+        <h3>Can AI Replace Research Analysts in Africa? Our Honest Assessment</h3>
+        <p>We examine where AI genuinely helps researchers, where it falls short, and why human expertise remains irreplaceable in African contexts.</p>
+        <div class="blog-lux-footer">
+          <span class="blog-lux-read">Read Article →</span>
+          <span class="blog-lux-time">8 min read</span>
+        </div>
+      </div>
+    </div>
+    <div class="blog-lux-card">
+      <div class="blog-lux-img">🎓</div>
+      <div class="blog-lux-body">
+        <div class="blog-lux-meta">
+          <span class="blog-lux-cat">ACADEMIC</span>
+          <span class="blog-lux-date">November 2024</span>
+        </div>
+        <h3>PhD Defence Day: A Checklist for Nigerian Doctoral Candidates</h3>
+        <p>Everything you need to prepare — from anticipating committee questions to formatting your final submission for university requirements.</p>
+        <div class="blog-lux-footer">
+          <span class="blog-lux-read">Read Article →</span>
+          <span class="blog-lux-time">10 min read</span>
+        </div>
+      </div>
+    </div>
+    <div class="blog-lux-card">
+      <div class="blog-lux-img">📋</div>
+      <div class="blog-lux-body">
+        <div class="blog-lux-meta">
+          <span class="blog-lux-cat">SURVEY DESIGN</span>
+          <span class="blog-lux-date">October 2024</span>
+        </div>
+        <h3>Designing Surveys That Work in Low-Literacy African Communities</h3>
+        <p>Fieldwork lessons from rural Nigeria and Ghana — adapting survey instruments for oral administration, local languages, and trust-building.</p>
+        <div class="blog-lux-footer">
+          <span class="blog-lux-read">Read Article →</span>
+          <span class="blog-lux-time">11 min read</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter-strip">
+    <h3>Stay Ahead with <em>Research Intelligence</em></h3>
+    <p>Join 2,400+ researchers, analysts, and business leaders who get our monthly insights.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="your@email.com"/>
+      <button class="newsletter-btn">Subscribe →</button>
     </div>
   </div>
 </div>
 
 <!-- ===================== CONTACT PAGE ===================== -->
 <div id="contact-page" class="page">
-  <div class="section">
-    <span class="section-label">GET IN TOUCH</span>
-    <h2 class="section-title">Start Your <em>Research Journey</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Fill the form below and we'll send you a detailed quote within 24 hours — completely free.</p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Lagos & Abuja, Nigeria<br>Pan-African reach across 12+ countries</p></div></div>
-        <div class="contact-item"><div class="contact-icon">📱</div><div><h4>WhatsApp</h4><p>+234 906 934 0228<br>Mon–Sat, 8am–8pm WAT</p></div></div>
-        <div class="contact-item"><div class="contact-icon">📧</div><div><h4>Email</h4><p>info@3wiseresearchhub.com<br>Response within 4 hours</p></div></div>
-        <div class="contact-item"><div class="contact-icon">⏱️</div><div><h4>Turnaround</h4><p>Quote within 24 hours<br>Projects from 48 hours delivery</p></div></div>
-        <div style="margin-top:8px">
-          <a href="https://wa.me/2349069340228?text=Hello%203Wise%20Research%20Hub%2C%20I%20would%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;border:none;border-radius:50px;padding:12px 24px;font-family:'Outfit',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;transition:all 0.3s">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.83L.043 23.25c-.096.345.008.714.27.952.195.179.451.275.71.275a1 1 0 0 0 .299-.046l5.584-1.777A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.668-.5-5.217-1.378L2.5 21.862l1.252-4.2A10 10 0 1 1 12 22z"/></svg>
-            Chat on WhatsApp Now
-          </a>
-        </div>
-      </div>
-      <div class="contact-form">
-        <div id="formSuccess" class="form-success">✅ Thank you! We'll send your quote within 24 hours.</div>
-        <div id="formBody">
-          <div class="form-row">
-            <div class="form-group"><label>FIRST NAME</label><input type="text" placeholder="John" id="fname"/></div>
-            <div class="form-group"><label>LAST NAME</label><input type="text" placeholder="Doe" id="lname"/></div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-deco">HI</div>
+    <div class="page-hero-label">GET IN TOUCH</div>
+    <h1>Let's Build Your<br><em>Research Story</em></h1>
+    <p>Fill the form below and we'll get back to you with a detailed, transparent quote within 24 hours — completely free, no strings attached.</p>
+  </div>
+
+  <!-- Contact Grid -->
+  <div class="section" style="padding-bottom:40px">
+    <div class="contact-lux-grid">
+
+      <!-- Left: Info -->
+      <div class="contact-lux-left">
+        <p class="contact-lux-tagline">"Great decisions begin with great research. Let's build yours together."<br><span style="font-size:0.75rem;color:rgba(212,175,55,0.6);font-style:normal">— Samuel Stephen, Founder</span></p>
+        <div class="contact-cards">
+          <div class="contact-lux-card">
+            <div class="contact-lux-icon">📍</div>
+            <div>
+              <h4>OUR LOCATIONS</h4>
+              <p>Lagos, Abuja & Kaduna State, Nigeria</p>
+              <small>Pan-African reach across 12+ countries</small>
+            </div>
           </div>
-          <div class="form-group"><label>EMAIL ADDRESS</label><input type="email" placeholder="john@example.com" id="femail"/></div>
-          <div class="form-group"><label>PHONE / WHATSAPP</label><input type="tel" placeholder="+234 800 000 0000" id="fphone"/></div>
-          <div class="form-group">
+          <div class="contact-lux-card">
+            <div class="contact-lux-icon">📱</div>
+            <div>
+              <h4>WHATSAPP</h4>
+              <p>+234 906 934 0228</p>
+              <small>Mon–Sat, 8am–8pm WAT</small>
+            </div>
+          </div>
+          <div class="contact-lux-card">
+            <div class="contact-lux-icon">📧</div>
+            <div>
+              <h4>EMAIL</h4>
+              <p>3wiseresearchhub@gmail.com</p>
+              <small>Response within 4 hours</small>
+            </div>
+          </div>
+          <div class="contact-lux-card">
+            <div class="contact-lux-icon">⏱️</div>
+            <div>
+              <h4>TURNAROUND</h4>
+              <p>Quote within 24 hours</p>
+              <small>Projects delivered from 48 hours</small>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/2349069340228?text=Hello%203Wise%20Research%20Hub%2C%20I%20would%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener" class="contact-wa-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.83L.043 23.25c-.096.345.008.714.27.952.195.179.451.275.71.275a1 1 0 0 0 .299-.046l5.584-1.777A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.668-.5-5.217-1.378L2.5 21.862l1.252-4.2A10 10 0 1 1 12 22z"/></svg>
+          Chat on WhatsApp Now
+        </a>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-lux-form">
+        <div id="luxFormSuccess" class="lux-form-success">
+          <div style="font-size:2.5rem;margin-bottom:16px">✅</div>
+          <h3>Thank You!</h3>
+          <p>We've received your request and will send your quote within 24 hours. Check your email and WhatsApp!</p>
+        </div>
+        <div id="luxFormBody">
+          <h3 class="form-title">Request a Free Quote</h3>
+          <p class="form-subtitle">Fill in your details and we'll craft a tailored research proposal just for you.</p>
+          <div class="lux-form-row">
+            <div class="lux-form-group">
+              <label>FIRST NAME</label>
+              <input type="text" class="lux-input" placeholder="John" id="lux-fname"/>
+            </div>
+            <div class="lux-form-group">
+              <label>LAST NAME</label>
+              <input type="text" class="lux-input" placeholder="Doe" id="lux-lname"/>
+            </div>
+          </div>
+          <div class="lux-form-group">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" class="lux-input" placeholder="john@example.com" id="lux-email"/>
+          </div>
+          <div class="lux-form-group">
+            <label>PHONE / WHATSAPP</label>
+            <input type="tel" class="lux-input" placeholder="+234 800 000 0000" id="lux-phone"/>
+          </div>
+          <div class="lux-form-group">
             <label>SERVICE NEEDED</label>
-            <select id="fservice">
+            <select class="lux-input lux-select" id="lux-service">
               <option value="">Select a service…</option>
               <option>Academic Research & Thesis Support</option>
               <option>Market Research & Business Intelligence</option>
@@ -521,13 +2052,47 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
               <option>Survey Design & Fieldwork</option>
               <option>Policy Research & Report Writing</option>
               <option>Grant Proposal Writing</option>
+              <option>Healthcare Research</option>
+              <option>Environmental & ESG Research</option>
+              <option>Monitoring & Evaluation</option>
               <option>Other</option>
             </select>
           </div>
-          <div class="form-group"><label>PROJECT DETAILS</label><textarea placeholder="Tell us about your research project, deadline, and any specific requirements…" id="fmessage"></textarea></div>
-          <button class="btn-submit" onclick="submitForm()">Send My Request →</button>
+          <div class="lux-form-group">
+            <label>PROJECT DETAILS</label>
+            <textarea class="lux-input lux-textarea" placeholder="Tell us about your research project, deadline, budget range, and any specific requirements…" id="lux-message"></textarea>
+          </div>
+          <button class="lux-submit" onclick="submitLuxForm()">Send My Request →</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Quick Stats Strip -->
+  <div class="contact-map-strip">
+    <div class="contact-map-item">
+      <h4>24 Hrs</h4>
+      <p>Quote Turnaround</p>
+    </div>
+    <div style="width:0.5px;height:40px;background:rgba(212,175,55,0.2)"></div>
+    <div class="contact-map-item">
+      <h4>98%</h4>
+      <p>Client Satisfaction</p>
+    </div>
+    <div style="width:0.5px;height:40px;background:rgba(212,175,55,0.2)"></div>
+    <div class="contact-map-item">
+      <h4>500+</h4>
+      <p>Projects Delivered</p>
+    </div>
+    <div style="width:0.5px;height:40px;background:rgba(212,175,55,0.2)"></div>
+    <div class="contact-map-item">
+      <h4>12+</h4>
+      <p>African Countries</p>
+    </div>
+    <div style="width:0.5px;height:40px;background:rgba(212,175,55,0.2)"></div>
+    <div class="contact-map-item">
+      <h4>Free</h4>
+      <p>First Consultation</p>
     </div>
   </div>
 </div>
@@ -557,8 +2122,8 @@ footer{background:rgba(3,3,3,1);border-top:0.5px solid rgba(212,175,55,0.12);pad
     <div class="footer-col">
       <h4>CONTACT</h4>
       <a href="https://wa.me/2349069340228" target="_blank">WhatsApp Us</a>
-      <a href="mailto:info@3wiseresearchhub.com">Send Email</a>
-      <a>Lagos & Abuja, Nigeria</a>
+      <a href="mailto:3wiseresearchhub@gmail.com">Send Email</a>
+      <a>Lagos, Abuja & Kaduna, Nigeria</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -630,19 +2195,28 @@ function showPage(name){
   const navEl = document.getElementById('nav-'+name);
   if(navEl) navEl.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
-  // Show/hide footer (always show)
   document.getElementById('site-footer').style.display='block';
 }
 function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');}
 
-/* ===== CONTACT FORM ===== */
-function submitForm(){
-  const fname=document.getElementById('fname').value.trim();
-  const femail=document.getElementById('femail').value.trim();
-  const fservice=document.getElementById('fservice').value;
-  if(!fname||!femail||!fservice){alert('Please fill in your name, email, and service needed.');return;}
-  document.getElementById('formBody').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+/* Portfolio filter buttons */
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+});
+
+/* ===== LUX CONTACT FORM ===== */
+function submitLuxForm(){
+  const fname=document.getElementById('lux-fname').value.trim();
+  const email=document.getElementById('lux-email').value.trim();
+  const service=document.getElementById('lux-service').value;
+  if(!fname||!email||!service){alert('Please fill in your name, email, and service needed.');return;}
+  document.getElementById('luxFormBody').style.display='none';
+  document.getElementById('luxFormSuccess').style.display='block';
 }
 
 /* ===== GLOBE ===== */
@@ -682,11 +2256,11 @@ const SYSTEM_PROMPT=`You are the 3WISE AI Assistant — a warm, intelligent, and
 COMPANY FACTS (never get these wrong):
 - CEO & Founder: Samuel Stephen
 - Company: 3WISE Research Hub
-- Location: Lagos & Abuja, Nigeria | 12+ African countries
-- WhatsApp: +2349069340228 | Email: info@3wiseresearchhub.com
+- Location: Lagos, Abuja & Kaduna State, Nigeria | 12+ African countries
+- WhatsApp: +2349069340228 | Email: 3wiseresearchhub@gmail.com
 
 SERVICES (mention only when relevant):
-Academic Research ₦15,000 | Market Research ₦80,000 | Data Analysis ₦20,000 | Survey Design ₦35,000 | Policy Research ₦60,000 | Grant Writing ₦50,000
+Academic Research ₦15,000 | Market Research ₦80,000 | Data Analysis ₦20,000 | Survey Design ₦35,000 | Policy Research ₦60,000 | Grant Writing ₦50,000 | Healthcare Research ₦45,000 | ESG Research ₦55,000 | M&E ₦70,000
 
 YOUR PERSONALITY:
 - Warm, welcoming, and genuinely helpful — like a trusted advisor
@@ -694,7 +2268,7 @@ YOUR PERSONALITY:
 - Replies in 2-3 short sentences maximum — never long paragraphs
 - Always address the user's specific question first before mentioning services
 - End every reply with one friendly question or clear next step
-- For quotes: WhatsApp +2349069340228`; 
+- For quotes: WhatsApp +2349069340228`;
 
 function getTime(){return new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});}
 function selectModel(btn){
