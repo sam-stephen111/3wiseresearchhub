@@ -636,13 +636,52 @@ function showPage(name){
 function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');}
 
 /* ===== CONTACT FORM ===== */
-function submitForm(){
-  const fname=document.getElementById('fname').value.trim();
-  const femail=document.getElementById('femail').value.trim();
-  const fservice=document.getElementById('fservice').value;
-  if(!fname||!femail||!fservice){alert('Please fill in your name, email, and service needed.');return;}
-  document.getElementById('formBody').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+async function submitForm() {
+  const fname    = document.getElementById('fname').value.trim();
+  const lname    = document.getElementById('lname').value.trim();
+  const femail   = document.getElementById('femail').value.trim();
+  const fphone   = document.getElementById('fphone').value.trim();
+  const fservice = document.getElementById('fservice').value;
+  const fmessage = document.getElementById('fmessage').value.trim();
+
+  if (!fname || !femail || !fservice) {
+    alert('Please fill in your name, email, and service needed.');
+    return;
+  }
+
+  const btn = document.querySelector('.btn-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://formspree.io/f/mzdoogpl', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new URLSearchParams({
+        'First Name':  fname,
+        'Last Name':   lname,
+        'Email':       femail,
+        'Phone':       fphone,
+        'Service':     fservice,
+        'Message':     fmessage,
+      })
+    });
+
+    if (res.ok) {
+      document.getElementById('formBody').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      const data = await res.json();
+      const errorMsg = data?.errors?.map(e => e.message).join(', ') || 'Submission failed.';
+      alert('Error: ' + errorMsg);
+      btn.textContent = 'Send My Request →';
+      btn.disabled = false;
+    }
+  } catch (err) {
+    alert('Network error. Please try WhatsApp or email us directly.');
+    btn.textContent = 'Send My Request →';
+    btn.disabled = false;
+  }
 }
 
 /* ===== GLOBE ===== */
